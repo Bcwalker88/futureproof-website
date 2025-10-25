@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Future Proof Antenna & Cabling Services</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <img class="logo" src="Images/Untitled design.png" alt="Future Proof Logo">
+    <div class="header-icons">
+      <img src="Images/reyee.png" alt="Reyee Logo" class="header-icon">
+      <img src="Images/FOP_Made_in_Australia_2.1_blank 4.png" alt="Made in Australia" class="header-icon">
+      <img src="Images/Ubiquiti_logo_PNG_(1).png" alt="Unifi Logo" class="header-icon">
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <h1>Future Proof Antenna & Cabling Services</h1>
+  <p>Future Proof Antenna & Cabling Services is your local expert</p>
+  <p> For antenna, cabling, and Starlink installations across Perth’s Northern Suburbs from Lancelin to Fremantle.</p>
+  <p>Quality installations, reliable signals, and precision work, done right the first time.</p>
+  <p>Reach out today by phone or message — we’re here to help.</p>
+  <div class="hero-phone">
+    <a href="tel:0411073101">📞 0411 073 101</a>
+  </div>
+</section>
+
+
+<!-- Services -->
+<section id="services" class="services">
+  <h2>Our Services</h2>
+  <div class="service-list">
+
+    <a href="#quote" class="service" data-service="Antenna Installation">
+      <h3>Antenna Installation</h3>
+      <p>Australian made only antennas and mounting. With uninterrupted crystal clean reception.</p>
+      <p>From $349</p>
+    </a>
+
+    <a href="#quote" class="service" data-service="TV Wall Mounting">
+      <h3>TV Wall Mounting</h3>
+      <p>Secure, clean, and hidden cabling for a sleek setup.</p>
+    </a>
+
+    <a href="#quote" class="service" data-service="Starlink Setup">
+      <h3>Starlink Installation and Setup</h3>
+      <p>Fast satellite internet installation, mounting, and setup.</p>
+      <p>From $299</p>
+    </a>
+
+    <a href="#quote" class="service" data-service="Networking & Data Cabling">
+      <h3>Network Solutions</h3>
+      <p>Improve WIFI coverage around the house or business.</p>
+      <p>Or Hardwire for best preformance</p>
+      <p>From $199</p>
+    </a>
+
+    <a href="#quote" class="service" data-service="NBN Troubleshooting">
+      <h3>NBN Troubleshooting</h3>
+      <p>Repair or replace internal cabling, relocation of Fibre IDU.</p>
+    </a>
+
+  </div>
+</section>
+
+<!-- Quote Form -->
+<section id="quote" class="quote">
+  <h2>Request a Quote</h2>
+  <form id="quote-form" action="https://formspree.io/f/xkgqaazw" method="POST">
+    
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="Name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="Email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="Phone" pattern="[0-9]{10}" required>
+
+    <label for="service">Service:</label>
+    <select id="service" name="service">
+      <option>Antenna Installation</option>
+      <option>TV Wall Mounting</option>
+      <option>Starlink Setup</option>
+      <option>Networking & Data Cabling</option>
+      <option>NBN Troubleshooting</option>
+    </select>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4"></textarea>
+
+    <button type="submit" class="btn">Submit</button>
+  </form>
+</section>
+
+<footer>
+  <p>
+    &copy; 2025 Future Proof Antenna & Cabling Services 
+    <span class="footer-license">T44288</span>
+  </p>
+</footer>
+
+
+
+<!-- JS file should come AFTER all HTML content -->
+<script src="script.js" defer></script>
+</body>
+</html>
+
+</html>

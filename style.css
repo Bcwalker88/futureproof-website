@@ -1,0 +1,429 @@
+/* === Global Styles === */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+  color: #333;
+}
+
+/* HEADER STYLING */
+header {
+  background: #060607; /* Or transparent if you prefer over a hero section */
+  padding: 15px 30px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.logo {
+  height: 70px;  /* adjust as needed */
+  width: auto;
+}
+
+/* BRAND ICONS */
+.header-icons {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+}
+
+.header-icon {
+  height: 70px;  /* size of brand logos */
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.header-icon:hover {
+  transform: scale(1.05);
+}
+
+/* NAV MENU */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+  color: #f8c43f;
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  .header-icon {
+    height: 35px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
+/* === Hero Section === */
+.hero {
+  background: linear-gradient(to right, #004aad, #0077ff);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-phone {
+  margin: 15px 0;
+}
+
+.hero-phone {
+  margin: 15px 0;
+}
+
+.hero-phone a {
+  color: white;                    /* white text */
+  text-decoration: none;           /* removes underline */
+  font-size: 1.3rem;
+  font-weight: bold;
+  background: rgba(247, 242, 242, 0.3);  /* transparent background */
+  padding: 10px 20px;
+  border-radius: 6px;
+  display: inline-block;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+/* Hover effect – raises and darkens */
+.hero-phone a:hover {
+  background: rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+}
+
+.cta-button {
+  background: white;
+  color: #004aad;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #e1e1e1;
+}
+
+/* === Services Section === */
+.services {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service {
+  display: block;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover effect — raises the card */
+.service:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Center the Quote Section */
+.quote {
+  text-align: center;
+  padding: 60px 20px;
+  background: #004aad;
+  color: #fff
+}
+
+/* Keep the form neat and centered */
+#quote-form {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+}
+
+/* Input and label styling */
+#quote-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#quote-form input,
+#quote-form select,
+#quote-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+#quote-form textarea {
+  height: 150px; /* or adjust to your liking */
+  resize: none;
+}
+
+/* Center the button neatly */
+#quote-form .btn {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto 0;
+  background: white;
+  color: #004aad;
+  padding: 14px 0;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect */
+#quote-form .btn:hover {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+/* Hover effect */
+#quote-form .btn:hover {
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  transform: translateY(-5px);
+}
+
+
+/* === Footer === */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #0a0f1a;
+  color: white;
+  font-size: 14px;
+}
+
+/* keeps text and icon aligned properly */
+footer p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* ✅ ensures it stacks neatly on mobile */
+  gap: 6px;
+  margin: 0;
+}
+
+.footer-license {
+  margin-left: 5px;
+}
+
+.footer-icon {
+  width: 35px;
+  height: auto;
+  vertical-align: middle;
+  opacity: 0.9;
+}
+
+/* optional hover effect */
+.footer-icon:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  transition: 0.3s ease;
+}
+
+
+/* === Responsive Design === */
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  .logo {
+    height: 70px;
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .service-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+
+@media (hover: none) {
+  .service:hover {
+    transform: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+/* === Extra Small Screens (phones) === */
+@media (max-width: 600px) {
+
+  /* Header logo + nav cleanup */
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+
+  /* Hero spacing fix */
+  .hero {
+    padding: 40px 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  /* Service cards full width */
+  .service {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  /* Form width and button fit */
+  #quote-form {
+    max-width: 90%;
+  }
+
+  #quote-form .btn {
+    width: 100%;
+  }
+
+  /* Footer layout fix */
+  footer p {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .footer-icon {
+    width: 16px;
+  }
+}
+
+/* === Mobile View Fixes === */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; /* ✅ stops sideways scrolling */
+}
+
+/* Fix flex layouts that stretch too far */
+header, footer, .hero, .services, .quote {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Prevent large text / spacing from overflowing */
+h1, h2, p {
+  word-wrap: break-word;
+}
+
+/* For small screens (under 600px) */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  .hero {
+    padding: 40px 10px;
+  }
+
+  .service {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  #quote-form {
+    width: 90%;
+  }
+
+  footer p {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+
