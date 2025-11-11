@@ -50,41 +50,45 @@
 
 
 <!-- Services -->
+<!-- SERVICES SECTION WITH INDIVIDUAL IDS -->
 <section id="services" class="services">
   <h2>Our Services</h2>
   <div class="service-list">
 
-    <a href="#quote" class="service" data-service="Antenna Installation">
+    <a href="#quote" id="antenna" class="service" data-service="Antenna Installation">
       <h3>Antenna Installation</h3>
-      <p>Australian made only antennas and mounting. With uninterrupted crystal clean reception.</p>
+      <p>Australian made only antennas and mounting. With Quility Products, Hills Black Arrow and Hills Tru-Spec Antenna</p>
       <p>From $349</p>
     </a>
 
-    <a href="#quote" class="service" data-service="TV Wall Mounting">
+    <a href="#quote" id="tv-mounting" class="service" data-service="TV Wall Mounting">
       <h3>TV Wall Mounting</h3>
-      <p>Secure, clean, and hidden cabling for a sleek setup.</p>
+      <p>Sick of wobbly wall mounts or messy cables? We’ll get your TV mounted clean, straight, and safe — no stress, no guesswork. From flat to full-motion brackets, we’ll make it look like it was always meant to be there.</p>
+      <p>Starting From $249</p>
     </a>
 
-    <a href="#quote" class="service" data-service="Starlink Setup">
+    <a href="#quote" id="starlink" class="service" data-service="Starlink Setup">
       <h3>Starlink Installation and Setup</h3>
-      <p>Fast satellite internet installation, mounting, and setup.</p>
+      <p>Improve your poor NBN speed and get 400+ Mbps download, mounting, and setup.</p>
       <p>From $299</p>
     </a>
 
-    <a href="#quote" class="service" data-service="Networking & Data Cabling">
+    <a href="#quote" id="data" class="service" data-service="Networking & Data Cabling">
       <h3>Network Solutions</h3>
-      <p>Improve WIFI coverage around the house or business.</p>
-      <p>Or Hardwire for best preformance</p>
+      <p>Improve Wi-Fi coverage around the house or business.</p>
+      <p>With a full mesh system — either Pods or ceiling Access Points.</p>
       <p>From $199</p>
     </a>
 
-    <a href="#quote" class="service" data-service="NBN Troubleshooting">
+    <a href="#quote" id="nbn" class="service" data-service="NBN Troubleshooting">
       <h3>NBN Troubleshooting</h3>
-      <p>Repair or replace internal cabling, relocation of Fibre IDU.</p>
+      <p>Sick of NBN installs in random spots? We’ll relocate your NBN equipment to the perfect spot for coverage, accessibility, and a cleaner setup. Message us today and we’ll make it work for you.</p>
+      <p>Starting From $149</p>
     </a>
 
   </div>
 </section>
+
 
 <!-- Quote Form -->
 <section id="quote" class="quote">
@@ -100,6 +104,9 @@
 
   <label for="phone">Phone Number:</label>
   <input type="tel" id="phone" name="Phone" pattern="[0-9]{10}" required>
+
+  <label for="address">Address:</label>
+  <input type="text" id="address" name="Address" required>
 
   <label for="service">Service:</label>
   <select id="service" name="service">
