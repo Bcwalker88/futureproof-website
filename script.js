@@ -2,22 +2,21 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("✅ Script loaded");
 
   // === Smooth scroll + auto-select service ===
-  const services = document.querySelectorAll('.service');
-  const quoteSection = document.querySelector('#quote');
+  const services = document.querySelectorAll(".service");
+  const quoteSection = document.querySelector("#quote");
   const selectMenu = document.querySelector('select[name="service"]');
 
-  services.forEach(service => {
-    service.addEventListener('click', e => {
+  services.forEach((service) => {
+    service.addEventListener("click", (e) => {
       e.preventDefault();
 
-      const selectedService = service.getAttribute('data-service');
+      const selectedService = service.getAttribute("data-service");
       if (quoteSection) {
-        quoteSection.scrollIntoView({ behavior: 'smooth' });
+        quoteSection.scrollIntoView({ behavior: "smooth" });
       }
 
-      // Wait a bit before selecting (for smooth scroll)
       setTimeout(() => {
-        if (selectMenu) {
+        if (selectMenu && selectedService) {
           selectMenu.value = selectedService;
         }
       }, 600);
@@ -25,47 +24,47 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // === Handle quote form submission (Formspree) ===
-  const form = document.getElementById('quote-form');
-  if (!form) {
-    // stop early if form is missing instead of logging error
-    return;
-  }
+  const form = document.getElementById("quote-form");
+  if (!form) return;
 
-  form.addEventListener('submit', async e => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const formData = new FormData(form);
-    const action = form.getAttribute('action');
+    const action = form.getAttribute("action");
+    const redirectUrl = form.dataset.fsRedirect;
 
     try {
       const response = await fetch(action, {
-        method: 'POST',
+        method: "POST",
         body: formData,
-        headers: { 'Accept': 'application/json' }
+        headers: { Accept: "application/json" },
       });
 
       if (response.ok) {
-        showSuccessMessage("✅ Thanks for your request! We will contact you soon.");
-        form.reset();
-
-        // Smooth scroll back to home
-        const homeSection = document.querySelector('#home');
-        if (homeSection) {
-          setTimeout(() => {
-            homeSection.scrollIntoView({ behavior: 'smooth' });
-          }, 1200);
+        // If a redirect URL is provided, go there (thankyou page)
+        if (redirectUrl) {
+          window.location.href = redirectUrl;
+        } else {
+          showMessage(
+            "✅ Thanks for your request! We will contact you soon."
+          );
+          form.reset();
         }
       } else {
-        showSuccessMessage("⚠️ There was an issue submitting your request. Please try again.", true);
+        showMessage(
+          "⚠️ There was an issue submitting your request. Please try again.",
+          true
+        );
       }
     } catch (error) {
-      showSuccessMessage("❌ Network error. Please try again later.", true);
       console.error(error);
+      showMessage("❌ Network error. Please try again later.", true);
     }
   });
 
-  // === Function to show success message ===
-  function showSuccessMessage(message, isError = false) {
+  // === Function to show temporary toast message ===
+  function showMessage(message, isError = false) {
     const msgBox = document.createElement("div");
     msgBox.textContent = message;
     msgBox.style.position = "fixed";
