@@ -1,34 +1,44 @@
-<url>
-  <loc>https://futureproofantenna.com.au/antenna.html</loc>
-  <lastmod>2025-11-26T00:34:34+00:00</lastmod>
-</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-<url>
-  <loc>https://futureproofantenna.com.au/Starlink.html</loc>
-  <lastmod>2025-11-26T00:34:34+00:00</lastmod>
-</url>
+  <url>
+    <loc>https://futureproofantenna.com.au/</loc>
+    <lastmod>2025-11-26</lastmod>
+  </url>
 
-<url>
-  <loc>https://futureproofantenna.com.au/HomeWifi.html</loc>
-  <lastmod>2025-11-26T00:34:34+00:00</lastmod>
-</url>
+  <url>
+    <loc>https://futureproofantenna.com.au/antenna.html</loc>
+    <lastmod>2025-11-26</lastmod>
+  </url>
 
-<url>
-  <loc>https://futureproofantenna.com.au/NBN.html</loc>
-  <lastmod>2025-11-26T00:34:34+00:00</lastmod>
-</url>
+  <url>
+    <loc>https://futureproofantenna.com.au/Starlink.html</loc>
+    <lastmod>2025-11-26</lastmod>
+  </url>
 
-<url>
-  <loc>https://futureproofantenna.com.au/DataIT.html</loc>
-  <lastmod>2025-11-26T00:34:34+00:00</lastmod>
-</url>
+  <url>
+    <loc>https://futureproofantenna.com.au/HomeWifi.html</loc>
+    <lastmod>2025-11-26</lastmod>
+  </url>
 
-<url>
-  <loc>https://futureproofantenna.com.au/TVMount.html</loc>
-  <lastmod>2025-11-26T00:34:34+00:00</lastmod>
-</url>
+  <url>
+    <loc>https://futureproofantenna.com.au/NBN.html</loc>
+    <lastmod>2025-11-26</lastmod>
+  </url>
 
-<url>
-  <loc>https://futureproofantenna.com.au/Quote.html</loc>
-  <lastmod>2025-11-26T00:34:34+00:00</lastmod>
-</url>
+  <url>
+    <loc>https://futureproofantenna.com.au/DataIT.html</loc>
+    <lastmod>2025-11-26</lastmod>
+  </url>
+
+  <url>
+    <loc>https://futureproofantenna.com.au/TVMount.html</loc>
+    <lastmod>2025-11-26</lastmod>
+  </url>
+
+  <url>
+    <loc>https://futureproofantenna.com.au/Quote.html</loc>
+    <lastmod>2025-11-26</lastmod>
+  </url>
+
+</urlset>
