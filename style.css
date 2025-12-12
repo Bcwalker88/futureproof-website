@@ -3,21 +3,30 @@
   box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   max-width: 100%;
   overflow-x: hidden;
+  height: 100%;
 }
 
 body {
   font-family: Arial, sans-serif;
   background: #f8f9fa;
   color: #333;
+
+  /* Make footer stick to bottom */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* === HEADER STYLING === */
+main {
+  flex: 1 0 auto; /* Pushes footer down when used */
+}
+
+/* === HEADER === */
 header {
   background: #060607;
   padding: 15px 30px;
@@ -35,7 +44,6 @@ header {
   width: auto;
 }
 
-/* BRAND ICONS (desktop) */
 .header-icons {
   display: flex;
   gap: 40px;
@@ -45,44 +53,106 @@ header {
 .header-icon {
   height: 55px;
   width: auto;
-  transition: transform 0.3s ease;
+  transition: 0.3s;
 }
 
 .header-icon:hover {
   transform: scale(1.05);
 }
 
-/* NAV MENU (desktop) */
 .main-nav ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   gap: 25px;
+  margin: 0;
+  padding: 0;
 }
 
 .main-nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .main-nav a:hover {
   color: #f8c43f;
-  transform: translateY(-2px);
 }
 
-/* === Hero Section === */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  min-width: 220px;
+  padding: 10px 0;
+  border-radius: 6px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-content a:hover {
+  background: #f3f3f3;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* === Mobile Nav === */
+.nav-toggle {
+  display: none;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.mobile-nav {
+  display: none;
+  background: #060607;
+  border-top: 1px solid #333;
+}
+
+.mobile-nav.open {
+  display: block;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 15px 20px;
+  margin: 0;
+}
+
+.mobile-nav a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  padding: 8px 0;
+}
+
+/* === HERO (shared styles) === */
 .hero {
   background: linear-gradient(to right, #004aad, #0077ff);
   color: white;
   text-align: center;
-  padding: 100px 20px;
+  padding: 80px 20px;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   margin-bottom: 10px;
 }
 
@@ -90,104 +160,130 @@ header {
   margin: 8px 0;
 }
 
-.hero-phone {
-  margin: 20px 0 0;
-}
-
-.hero-phone a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.3rem;
-  font-weight: bold;
-  background: rgba(247, 242, 242, 0.3);
-  padding: 10px 20px;
-  border-radius: 6px;
-  display: inline-block;
-  transition: transform 0.25s ease, background 0.25s ease;
-}
-
-.hero-phone a:hover {
-  background: rgba(0, 0, 0, 0.5);
-  transform: translateY(-5px);
-}
-
-.cta-button {
-  background: white;
-  color: #004aad;
-  padding: 12px 24px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  transition: background 0.3s ease;
-}
-
-.cta-button:hover {
-  background: #e1e1e1;
-}
-
-/* === Services Section === */
-.services {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.services h2 {
-  margin-bottom: 20px;
-}
-
-.service-list {
+.hero-contact {
+  margin-top: 20px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
-.service {
-  display: block;
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
+.hero-phone,
+.hero-email {
+  background: rgba(255,255,255,0.25);
+  padding: 10px 18px;
+  border-radius: 6px;
   text-decoration: none;
-  color: inherit;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  width: 280px;
-  cursor: pointer;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  color: white;
+  font-weight: bold;
 }
 
-.service:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+.hero-phone:hover,
+.hero-email:hover {
+  background: rgba(0,0,0,0.4);
 }
 
-/* === Quote Section === */
-.quote {
+
+
+
+/* === SINGLE SERVICE PAGES (Antenna, Starlink, WiFi, NBN) === */
+/* Fills the space between header and footer with blue */
+.page-single-hero {
+  padding-bottom: 40px;
+  flex: 1 0 auto;
+  min-height: calc(100vh - 140px); /* adjusts for header + footer height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* === HOME HERO – make blue area reach footer as well === */
+#home.hero {
+  flex: 1 0 auto;
+  min-height: calc(100vh - 140px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centres text nicely on home */
+}
+
+/* === FOOTER === */
+footer {
+  background: #0a0f1a;
+  color: white;
+  padding: 20px;
   text-align: center;
-  padding: 60px 20px;
+  flex-shrink: 0;
+}
+
+footer p {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* === MOBILE (global tweaks) === */
+@media (max-width: 600px) {
+  .header-icons,
+  .main-nav {
+    display: none !important;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .hero {
+    padding: 50px 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* === QUOTE PAGE === */
+
+.quote-page {
   background: #004aad;
   color: #fff;
+  padding: 60px 20px 80px;
+  text-align: center;
+}
+
+.quote-page h1 {
+  margin-bottom: 10px;
+}
+
+.quote-intro {
+  margin: 0 auto 25px;
+  max-width: 700px;
 }
 
 #quote-form {
+  max-width: 600px;
   margin: 0 auto;
-  width: 100%;
-  max-width: 500px;
   text-align: left;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 20px 18px 25px;
+  border-radius: 8px;
+}
+
+.form-row {
+  margin-bottom: 12px;
 }
 
 #quote-form label {
   display: block;
-  margin-top: 10px;
   font-weight: bold;
+  margin-bottom: 4px;
 }
 
 #quote-form input,
 #quote-form select,
 #quote-form textarea {
   width: 100%;
-  padding: 10px;
-  margin-top: 5px;
+  padding: 9px 10px;
   border-radius: 6px;
   border: none;
   outline: none;
@@ -195,125 +291,48 @@ header {
 }
 
 #quote-form textarea {
-  height: 150px;
-  resize: none;
+  resize: vertical;
+  min-height: 110px;
 }
 
-#quote-form .btn {
-  display: block;
+.btn-quote-submit {
   width: 100%;
-  max-width: 500px;
-  margin: 20px auto 0;
-  background: white;
-  color: #004aad;
-  padding: 14px 0;
+  margin-top: 15px;
+  padding: 12px 0;
   border-radius: 5px;
-  font-weight: bold;
-  text-decoration: none;
   border: none;
+  font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  background: #ffffff;
+  color: #004aad;
+  transition: background 0.25s, color 0.25s, transform 0.25s;
 }
 
-#quote-form .btn:hover {
-  background: rgba(0, 0, 0, 0.5);
+.btn-quote-submit:hover {
+  background: rgba(0, 0, 0, 0.6);
   color: #ffffff;
-  transform: translateY(-5px);
+  transform: translateY(-2px);
 }
 
-/* === Footer === */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #0a0f1a;
-  color: white;
-  font-size: 14px;
-}
-
-footer p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin: 0;
-}
-
-.footer-license {
-  margin-left: 5px;
-}
-
-/* === General Responsive (tablets, small laptops) === */
-@media (max-width: 900px) {
-  .hero {
-    padding: 60px 20px;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .service-list {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .service {
-    width: 90%;
-    max-width: 400px;
-  }
-}
-
-/* Disable hover effects on touch devices */
-@media (hover: none) {
-  .service:hover {
-    transform: none;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
-}
-
-/* === Extra Small Screens (phones) === */
+/* Mobile tweaks for quote page */
 @media (max-width: 600px) {
-  /* HEADER ON MOBILE: only logo visible */
-  .header-container {
-    justify-content: center;
-  }
-
-  .logo {
-    height: 65px;
-  }
-
-  .header-icons,
-  .main-nav {
-    display: none !important;
-  }
-
-  .hero {
-    padding: 40px 15px;
-  }
-
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .service {
-    width: 100%;
-    max-width: 350px;
+  .quote-page {
+    padding: 40px 15px 60px;
   }
 
   #quote-form {
-    max-width: 90%;
-  }
-
-  #quote-form .btn {
-    width: 100%;
-  }
-
-  footer p {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    line-height: 1.4;
+    padding: 15px 12px 20px;
   }
 }
+
+.service-section {
+  background-color: #0066cc;
+  color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 0; /* removes rounded corners */
+  width: 100%;
+  max-width: none; /* allows full width */
+  margin: 0; /* remove centering */
+}
+

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Request a Quote | Future Proof Antenna & Cabling Services</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header>
+  <div class="header-container">
+    <img class="logo" src="Images/Untitled design.png" alt="Future Proof Logo">
+
+    <div class="header-icons">
+      <img src="Images/reyee.png" alt="Reyee Logo" class="header-icon">
+      <img src="Images/FOP_Made_in_Australia_2.1_blank 4.png" alt="Made in Australia" class="header-icon">
+      <img src="Images/Ubiquiti_logo_PNG_(1).png" alt="Ubiquiti Logo" class="header-icon">
+    </div>
+
+    <!-- Hamburger for mobile -->
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+
+    <!-- Desktop nav -->
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html#home">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Services ▾</a>
+          <div class="dropdown-content">
+            <a href="antenna.html">Antenna Installation</a>
+            <a href="Starlink.html">Starlink Installation</a>
+            <a href="HomeWifi.html">Home &amp; Wi-Fi Upgrades</a>
+            <a href="NBN.html">NBN Relocation &amp; Troubleshooting</a>
+            <a href="DataIT.html">Data Cabling &amp; I.T. Services</a>
+          </div>
+        </li>
+        <li><a href="Quote.html">Request a Quote</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Mobile nav -->
+  <nav class="mobile-nav">
+    <ul>
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="antenna.html">Antenna Installation</a></li>
+      <li><a href="Starlink.html">Starlink Installation</a></li>
+      <li><a href="HomeWifi.html">Home &amp; Wi-Fi Upgrades</a></li>
+      <li><a href="NBN.html">NBN Relocation &amp; Troubleshooting</a></li>
+      <li><a href="Quote.html">Request a Quote</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="quote-page">
+    <h1>Request a Quote</h1>
+    <p class="quote-intro">
+      Please fill in your details below and we’ll get back to you with options tailored to your property.
+    </p>
+
+    <form
+      id="quote-form"
+      action="https://formspree.io/f/mjkpvyop"
+      method="POST"
+      data-fs-redirect="https://www.futureproofantenna.com.au/thankyou.html"
+    >
+      <div class="form-row">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="Name" autocomplete="name" required>
+      </div>
+
+      <div class="form-row">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="Email" autocomplete="email" required>
+      </div>
+
+      <div class="form-row">
+        <label for="phone">Phone Number:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="Phone"
+          pattern="[0-9]{10}"
+          placeholder="04XXXXXXXX"
+          required
+        >
+      </div>
+
+      <div class="form-row">
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="Address" autocomplete="street-address" required>
+      </div>
+
+      <div class="form-row">
+        <label for="service">Service:</label>
+        <select id="service" name="Service">
+          <option value="Antenna Installation">Antenna Installation</option>
+          <option value="TV Wall Mounting">TV Wall Mounting</option>
+          <option value="Starlink Install - Home &amp; Business">Starlink Install - Home &amp; Business</option>
+          <option value="Home &amp; Business Wi-Fi Upgrades">Home &amp; Business Wi-Fi Upgrades</option>
+          <option value="NBN Relocation &amp; Troubleshooting">NBN Relocation &amp; Troubleshooting</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="message">Message:</label>
+        <textarea
+          id="message"
+          name="Message"
+          rows="4"
+          placeholder="Tell us a bit about the job (single / double storey, location, issues, etc.)"
+        ></textarea>
+      </div>
+
+      <button type="submit" class="btn-quote-submit">Submit</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>
+    &copy; 2025 Future Proof Antenna &amp; Cabling Services
+    <span class="footer-license">T44288</span>
+  </p>
+</footer>
+
+</body>
+</html>
