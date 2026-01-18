@@ -8,6 +8,11 @@
   <meta name="description" content="Professional antenna installation, Starlink setup & Wi-Fi upgrades across Perth's northern suburbs. Licensed technicians, quality guaranteed. Call today!">
 
   <link rel="canonical" href="https://futureproofantenna.com.au/">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" href="favicon.png">
@@ -274,6 +279,43 @@
   margin-top:2px;
 }
 
+.rating-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.stars {
+  color: #ffc107;
+  font-size: 18px;
+}
+
+.rating-text {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.facebook-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: #1877f2;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 14px;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.facebook-link:hover {
+  background: #145dbf;
+  transform: scale(1.1);
+}
+
 
 
   </style>
@@ -284,8 +326,18 @@
 <!-- HEADER -->
 <header>
   <div class="header-container">
-    <img class="logo" src="Images/Untitled design.png" alt="Future Proof Logo">
 
+      <a
+    href="https://www.facebook.com/futureproofantenna"
+    target="_blank"
+    rel="noopener"
+    class="facebook-link"
+    aria-label="Visit us on Facebook"
+  >
+    <i class="fab fa-facebook-f"></i>
+  </a>
+    <img src="Images/Untitled design.png" alt="Future Proof Antenna & Cabling" class="logo">
+    
     <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
 
     <nav class="main-nav">
@@ -330,10 +382,11 @@
   <div class="hero-inner">
     <h1>Perth’s Trusted TV Antenna, Starlink & Home Wi-Fi Specialists</h1>
 
-    <div class="hero-rating">
-      <span class="stars">★★★★★</span>
-      <span class="rating-text">5-Star Rated Local Business</span>
-    </div>
+    <div class="rating-social">
+  <span class="stars">★★★★★</span>
+  <span class="rating-text">5-Star Rated Local Business</span>
+</div>
+
 
     <div class="hero-actions">
       <a href="tel:0493819163" class="hero-cta phone">📞 0493 819 163</a>
