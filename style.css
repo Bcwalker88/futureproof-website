@@ -3,7 +3,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   max-width: 100%;
@@ -23,7 +24,8 @@ body {
 }
 
 main {
-  flex: 1 0 auto; /* Pushes footer down when used */
+  flex: 1 0 auto;
+  /* Pushes footer down when used */
 }
 
 /* === HEADER === */
@@ -32,27 +34,30 @@ header {
   padding: 15px 30px;
 }
 
-.header-container{
+.header-container {
   min-height: 90px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  min-height: 70px; /* gives the header a consistent height */
+  min-height: 70px;
+  /* gives the header a consistent height */
 }
 
 
 
-.logo{
+.logo {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 
-  width: 175px;     /* 👈 makes it wider & clearer */
+  width: 175px;
+  /* 👈 makes it wider & clearer */
   height: auto;
 
-  max-width: 80%;   /* safety for smaller screens */
+  max-width: 80%;
+  /* safety for smaller screens */
 }
 
 
@@ -104,7 +109,7 @@ header {
   min-width: 220px;
   padding: 10px 0;
   border-radius: 6px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-content a {
@@ -126,7 +131,7 @@ header {
   transform: scale(1.1);
 }
 
-.facebook-link{
+.facebook-link {
   position: absolute;
   left: 30px;
   top: 50%;
@@ -149,7 +154,7 @@ header {
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
-.facebook-link:hover{
+.facebook-link:hover {
   background: #145dbf;
   transform: translateY(-50%) scale(1.12);
 }
@@ -216,7 +221,7 @@ header {
 
 .hero-phone,
 .hero-email {
-  background: rgba(255,255,255,0.25);
+  background: rgba(255, 255, 255, 0.25);
   padding: 10px 18px;
   border-radius: 6px;
   text-decoration: none;
@@ -226,7 +231,7 @@ header {
 
 .hero-phone:hover,
 .hero-email:hover {
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
 }
 
 
@@ -237,7 +242,8 @@ header {
 .page-single-hero {
   padding-bottom: 40px;
   flex: 1 0 auto;
-  min-height: calc(100vh - 140px); /* adjusts for header + footer height */
+  min-height: calc(100vh - 140px);
+  /* adjusts for header + footer height */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -249,7 +255,8 @@ header {
   min-height: calc(100vh - 140px);
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centres text nicely on home */
+  justify-content: center;
+  /* centres text nicely on home */
 }
 
 /* === FOOTER === */
@@ -270,6 +277,7 @@ footer p {
 
 /* === MOBILE (global tweaks) === */
 @media (max-width: 600px) {
+
   .header-icons,
   .main-nav {
     display: none !important;
@@ -376,9 +384,11 @@ footer p {
   color: #ffffff;
   padding: 60px 20px;
   text-align: center;
-  border-radius: 0; /* removes rounded corners */
+  border-radius: 0;
+  /* removes rounded corners */
   width: 100%;
-  max-width: none; /* allows full width */
-  margin: 0; /* remove centering */
+  max-width: none;
+  /* allows full width */
+  margin: 0;
+  /* remove centering */
 }
-

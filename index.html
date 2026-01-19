@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="en-AU">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- SEO Title & Meta Description -->
   <title>Antenna Installation Perth Northern Suburbs | Future Proof Antenna</title>
-  <meta name="description" content="Professional antenna installation, Starlink setup & Wi-Fi upgrades across Perth's northern suburbs. Licensed technicians, quality guaranteed. Call today!">
+  <meta name="description" content="Professional TV antenna installation, Starlink setup & whole-home Wi-Fi upgrades across Perth’s northern suburbs. Licensed & insured. Call 0493 819 163.">
 
+  <!-- Canonical URL -->
   <link rel="canonical" href="https://futureproofantenna.com.au/">
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-/>
-
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-  <!-- Open Graph -->
+  <!-- Open Graph (Social Preview) -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Antenna Installation Perth Northern Suburbs | Future Proof Antenna">
-  <meta property="og:description" content="Professional antenna installation, Starlink setup & Wi-Fi upgrades across Perth's northern suburbs.">
+  <meta property="og:description" content="Professional TV antenna installation, Starlink setup & whole-home Wi-Fi upgrades across Perth’s northern suburbs.">
   <meta property="og:url" content="https://futureproofantenna.com.au/">
+  <meta property="og:image" content="https://futureproofantenna.com.au/Images/tv-antenna-installation-butler-wa.jpg">
+  <meta property="og:image:alt" content="TV antenna installation in Perth’s northern suburbs by Future Proof Antenna & Cabling">
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
 
   <!-- Local Business Schema -->
   <script type="application/ld+json">
@@ -52,529 +58,243 @@
     gtag('config', 'AW-17678695746');
   </script>
 
+  <!-- Main Styles -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- HOME PAGE ONLY STYLES -->
-  <style>
-    html { scroll-behavior: smooth; }
-
-    .home-page .hero-inner{
-      max-width:1100px;
-      margin:0 auto;
-      padding:0 20px;
-      text-align:center;
-    }
-
-    .home-page .hero-actions{
-      display:flex;
-      justify-content:center;
-      gap:18px;
-      margin:20px 0 28px;
-      flex-wrap:wrap;
-    }
-
-    .home-page .hero-cta{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:12px 22px;
-      border-radius:10px;
-      font-weight:700;
-      font-size:1rem;
-      text-decoration:none;
-      white-space:nowrap;
-    }
-
-    /* Call + Quote = white */
-    .home-page .hero-cta.phone,
-    .home-page .hero-cta.quote{
-      background:#fff;
-      color:#005bd1;
-    }
-
-    /* Completed jobs = blue */
-    .home-page .hero-cta.scroll{
-      background:rgba(255,255,255,0.15);
-      color:#fff;
-    }
-
-    .home-page .hero-cta.scroll:hover{
-      background:rgba(255,255,255,0.25);
-    }
-
-    /* Centre the highlights properly */
-    .home-page .welcome-highlights{
-      max-width:600px;
-      margin:22px auto 18px;
-      text-align:center;
-      line-height:1.8;
-    }
-
-    /* Completed jobs section */
-    .home-page #completed-jobs{
-      scroll-margin-top:120px;
-      padding:80px 20px;
-      text-align:center;
-      color:#fff;
-      background:#005bd1;
-    }
-
-    /* Ensure section heading + intro text is visible on blue background */
-    .home-page #completed-jobs h2,
-    .home-page #completed-jobs > p{
-      color:#fff;
-    }
-
-    /* Job cards */
-    .home-page .jobs-grid{
-      max-width:1100px;
-      margin:28px auto 0;
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap:18px;
-      text-align:left;
-    }
-
-    .home-page .job-card{
-      background:#fff;
-      border-radius:14px;
-      overflow:hidden;
-      box-shadow:0 8px 24px rgba(0,0,0,0.14);
-      margin:0;
-    }
-
-    .home-page .job-card a{
-      display:block;
-    }
-
-    /* ✅ Image fills card and crops nicely; focus on top for antennas */
-    .home-page .job-card img{
-      width:100%;
-      height:340px;
-      object-fit:cover;
-      object-position: top center;
-      display:block;
-    }
-
-    .home-page .job-info{
-      padding:16px;
-    }
-
-    .home-page .job-info h3{
-      margin:0 0 6px;
-      font-size:1.1rem;
-      color:#111;
-    }
-
-    .home-page .job-location{
-      margin:0;
-      font-size:0.95rem;
-      opacity:0.75;
-      color:#111;
-    }
-
-    .home-page .job-description{
-      margin-top:8px;
-      font-size:0.95rem;
-      line-height:1.5;
-      color:#333;
-    }
-
-    @media (max-width:900px){
-      .home-page .jobs-grid{ grid-template-columns:1fr; }
-    }
-
-    @media (max-width:600px){
-      .home-page .job-card img{ height:220px; }
-    }
-
-    /* Lightbox */
-    .home-page .lightbox{
-      position: fixed;
-      inset: 0;
-      display: none;
-      z-index: 9999;
-    }
-
-    .home-page .lightbox.is-open{
-      display: block;
-    }
-
-    .home-page .lightbox-backdrop{
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.75);
-    }
-
-    .home-page .lightbox-content{
-      position: relative;
-      max-width: min(1000px, 92vw);
-      margin: 6vh auto 0;
-      background: #000;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
-    }
-
-    .home-page .lightbox-content img{
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .home-page .lightbox-caption{
-      margin: 0;
-      padding: 12px 16px;
-      color: #fff;
-      font-size: 0.95rem;
-      background: rgba(0,0,0,0.6);
-    }
-
-    .home-page .lightbox-close{
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      z-index: 10;
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      border: none;
-      background: rgba(0,0,0,0.65);
-      color: #fff;
-      font-size: 20px;
-      font-weight: bold;
-      cursor: pointer;
-      line-height: 1;
-    }
-
-    .home-page .lightbox-close:hover{
-      background: rgba(0,0,0,0.85);
-    }
-
-/* ⭐ HERO RATING */
-.home-page .hero-rating{
-  margin-top:18px;
-  text-align:center;
-  color:#fff;
-}
-
-.home-page .hero-rating .stars{
-  display:block;
-  color:#f4b400; /* Google gold */
-  font-size:1.2rem;
-  letter-spacing:2px;
-  margin-bottom:4px;
-}
-
-.home-page .hero-rating .rating-text{
-  display:block;
-  font-weight:600;
-  font-size:0.95rem;
-}
-
-.home-page .hero-rating .rating-subtext{
-  display:block;
-  font-size:0.8rem;
-  opacity:0.85;
-  margin-top:2px;
-}
-
-.rating-social {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 12px;
-}
-
-.stars {
-  color: #ffc107;
-  font-size: 18px;
-}
-
-.rating-text {
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.facebook-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  background: #1877f2;
-  color: #fff;
-  border-radius: 50%;
-  font-size: 14px;
-  text-decoration: none;
-  transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.facebook-link:hover {
-  background: #145dbf;
-  transform: scale(1.1);
-}
-
-
-
-  </style>
 </head>
 
 <body class="home-page">
 
-<!-- HEADER -->
-<header>
-  <div class="header-container">
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <a href="https://www.facebook.com/futureproofantenna" target="_blank" rel="noopener" class="facebook-link"
+        aria-label="Visit us on Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
 
-      <a
-    href="https://www.facebook.com/futureproofantenna"
-    target="_blank"
-    rel="noopener"
-    class="facebook-link"
-    aria-label="Visit us on Facebook"
-  >
-    <i class="fab fa-facebook-f"></i>
-  </a>
-    <img src="Images/Untitled design.png" alt="Future Proof Antenna & Cabling" class="logo">
-    
-    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <a href="/" aria-label="Go to homepage">
+        <img src="Images/Untitled design.png" alt="Future Proof Antenna & Cabling" class="logo">
+      </a>
 
-    <nav class="main-nav">
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Services ▾</a>
+            <div class="dropdown-content">
+              <a href="antenna.html">Antenna Installation</a>
+              <a href="Starlink.html">Starlink Installation</a>
+              <a href="HomeWifi.html">Home Wi-Fi</a>
+              <a href="NBN.html">NBN Services</a>
+              <a href="DataIT.html">Data Cabling</a>
+              <a href="TVMount.html">TV Mounting</a>
+            </div>
+          </li>
+          <li><a href="Quote.html">Request a Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Mobile nav (slides down) -->
+    <nav class="mobile-nav" aria-label="Mobile navigation">
       <ul>
         <li><a href="#home">Home</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropbtn">Services ▾</a>
-          <div class="dropdown-content">
-            <a href="antenna.html">Antenna Installation</a>
-            <a href="Starlink.html">Starlink Installation</a>
-            <a href="HomeWifi.html">Home Wi-Fi</a>
-            <a href="NBN.html">NBN Services</a>
-            <a href="DataIT.html">Data Cabling</a>
-            <a href="TVMount.html">TV Mounting</a>
-          </div>
-        </li>
+
+        <li class="mobile-group-title">Services</li>
+        <li><a href="antenna.html">Antenna Installation</a></li>
+        <li><a href="Starlink.html">Starlink Installation</a></li>
+        <li><a href="HomeWifi.html">Home &amp; Wi-Fi Upgrades</a></li>
+        <li><a href="NBN.html">NBN Relocation &amp; Troubleshooting</a></li>
+        <li><a href="DataIT.html">Data Cabling &amp; I.T. Services</a></li>
+        <li><a href="TVMount.html">TV Wall Mounting</a></li>
+
         <li><a href="Quote.html">Request a Quote</a></li>
       </ul>
     </nav>
-  </div>
+  </header>
 
-  <!-- Mobile nav (slides down) -->
-  <nav class="mobile-nav">
-    <ul>
-      <li><a href="#home">Home</a></li>
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-inner">
+      <h1>Perth’s Trusted TV Antenna, Starlink &amp; Home Wi-Fi Specialists</h1>
 
-      <li class="mobile-group-title">Services</li>
-      <li><a href="antenna.html">Antenna Installation</a></li>
-      <li><a href="Starlink.html">Starlink Installation</a></li>
-      <li><a href="HomeWifi.html">Home &amp; Wi-Fi Upgrades</a></li>
-      <li><a href="NBN.html">NBN Relocation &amp; Troubleshooting</a></li>
-      <li><a href="DataIT.html">Data Cabling &amp; I.T. Services</a></li>
-      <li><a href="TVMount.html">TV Wall Mounting</a></li>
+      <div class="rating-social">
+        <span class="stars" aria-label="5 star rating">★★★★★</span>
+        <span class="rating-text">5-Star Rated Local Business</span>
+      </div>
 
-      <li><a href="Quote.html">Request a Quote</a></li>
-    </ul>
-  </nav>
-</header>
+      <div class="hero-actions">
+        <a href="tel:0493819163" class="hero-cta phone">📞 0493 819 163</a>
+        <a href="Quote.html" class="hero-cta quote">📝 Request a Quote</a>
+        <a href="#completed-jobs" class="hero-cta scroll">↓ Completed Jobs</a>
+      </div>
 
-<!-- HERO -->
-<section id="home" class="hero">
-  <div class="hero-inner">
-    <h1>Perth’s Trusted TV Antenna, Starlink & Home Wi-Fi Specialists</h1>
-
-    <div class="rating-social">
-  <span class="stars">★★★★★</span>
-  <span class="rating-text">5-Star Rated Local Business</span>
-</div>
-
-
-    <div class="hero-actions">
-      <a href="tel:0493819163" class="hero-cta phone">📞 0493 819 163</a>
-      <a href="Quote.html" class="hero-cta quote">📝 Request a Quote</a>
-      <a href="#completed-jobs" class="hero-cta scroll">↓ Completed Jobs</a>
-    </div>
-
-  <p>
-      Serving Perth’s northern suburbs, we specialise in professional TV antenna installations,
-      Starlink setups and whole-home Wi-Fi upgrades. Clean installs, strong signals and honest,
-      upfront pricing — every time.
-  </p>
-
-
-    <p>
-      We deliver clean installs, strong signals and honest, upfront pricing — every time.
-    </p>
-
-    <p class="welcome-highlights">
-      ✔ Australian-made antennas available<br>
-      ✔ Fully licensed &amp; insured<br>
-      ✔ Friendly local technician<br>
-      ✔ Quality workmanship guaranteed
-    </p>
-  </div>
-</section>
-
-
-
-<!-- COMPLETED JOBS -->
-<section id="completed-jobs">
-  <h2>Jobs We’ve Completed</h2>
-  <p>Recent antenna installs, Starlink setups and cabling work across Perth’s northern suburbs.</p>
-
-  <div class="jobs-grid">
-
-    <!-- IMPORTANT: Replace these filenames with your real image files (no spaces or + symbols) -->
-    <figure class="job-card">
-      <a href="Images/tv-antenna-installation-butler-wa.jpg" class="job-lightbox" data-caption="TV Antenna Upgrade • Butler, WA">
-        <img src="Images/tv-antenna-installation-butler-wa.jpg"
-             alt="TV antenna installation in Butler WA"
-             loading="lazy" decoding="async">
-      </a>
-      <figcaption class="job-info">
-        <h3>TV Antenna Upgrade</h3>
-        <p class="job-location">In Butler, WA</p>
-        <p class="job-description">
-          Removed old antenna, installed new Premium antenna with a proper flashing kit, replaced lead-in cable and tested all TV points.
-        </p>
-      </figcaption>
-    </figure>
-
-        <figure class="job-card">
-      <a href="Images/tv-antenna-installation-perth-wa.JPEG" class="job-lightbox" data-caption="TV Antenna Upgrade • Butler, WA">
-        <img src="Images/tv-antenna-installation-perth-wa.JPEG"
-             alt="TV antenna installation in Perth WA"
-             loading="lazy" decoding="async">
-      </a>
-      <figcaption class="job-info">
-        <h3>TV Antenna Upgrade</h3>
-        <p class="job-location">Perth, WA</p>
-      <p class="job-description">
-          Roof-mounted at optimal height for stronger signal, delivering a clearer picture and stable reception.
-          Weather-resistant installation built for long-term reliability, professionally installed by
-          Future Proof Antenna &amp; Cabling in Perth, WA.
+      <p>
+        Serving Perth’s northern suburbs, we specialise in professional TV antenna installations,
+        Starlink setups and whole-home Wi-Fi upgrades. Clean installs, strong signals and honest,
+        upfront pricing — every time.
       </p>
 
-      </figcaption>
-    </figure>
+      <p class="welcome-highlights">
+        ✔ Australian-made antennas available<br>
+        ✔ Fully licensed &amp; insured<br>
+        ✔ Friendly local technician<br>
+        ✔ Quality workmanship guaranteed
+      </p>
+    </div>
+  </section>
 
-    <figure class="job-card">
-      <a href="Images/starlink-installation-eglinton-wa.jpg" class="job-lightbox" data-caption="Starlink Install • Alkimos, WA">
-        <img src="Images/starlink-installation-eglinton-wa.jpg"
-             alt="Starlink installation near Alkimos WA"
-             loading="lazy" decoding="async">
-      </a>
-      <figcaption class="job-info">
-        <h3>Starlink Install</h3>
-        <p class="job-location">In Eglinton, WA</p>
-        <p class="job-description">
-          Roof mount installed, cable run secured and sealed, system tested for strong connection and tidy finish.
-        </p>
-      </figcaption>
-    </figure>
+  <!-- COMPLETED JOBS -->
+  <section id="completed-jobs">
+    <h2>Jobs We’ve Completed</h2>
+    <p>Recent antenna installs, Starlink setups and cabling work across Perth’s northern suburbs.</p>
 
-    <figure class="job-card">
-      <a href="Images/home-wifi-upgrade.JPEG" class="job-lightbox" data-caption="Wi-Fi Upgrade • Yanchep, WA">
-        <img src="Images/home-wifi-upgrade.JPEG"
-             alt="Wi-Fi upgrade in Yanchep WA"
-             loading="lazy" decoding="async">
-      </a>
-      <figcaption class="job-info">
-        <h3>Wi-Fi Upgrade</h3>
-        <p class="job-location">In Mokin, WA</p>
-        <p class="job-description">
-          Installed upgraded Wi-Fi hardware, improved coverage and performance, and verified speeds throughout the home.
-        </p>
-      </figcaption>
-    </figure>
+    <div class="jobs-grid">
+      <figure class="job-card">
+        <a href="Images/tv-antenna-installation-butler-wa.jpg" class="job-lightbox"
+          data-caption="TV Antenna Upgrade • Butler, WA">
+          <img src="Images/tv-antenna-installation-butler-wa.jpg" alt="TV antenna installation in Butler WA"
+            loading="lazy" decoding="async">
+        </a>
+        <figcaption class="job-info">
+          <h3>TV Antenna Upgrade</h3>
+          <p class="job-location">Butler, WA</p>
+          <p class="job-description">
+            Removed old antenna, installed new premium antenna with a proper flashing kit, replaced lead-in cable and
+            tested all TV points.
+          </p>
+        </figcaption>
+      </figure>
 
+      <figure class="job-card">
+        <a href="Images/tv-antenna-installation-perth-wa.JPEG" class="job-lightbox"
+          data-caption="TV Antenna Upgrade • Perth, WA">
+          <img src="Images/tv-antenna-installation-perth-wa.JPEG" alt="TV antenna installation in Perth WA"
+            loading="lazy" decoding="async">
+        </a>
+        <figcaption class="job-info">
+          <h3>TV Antenna Upgrade</h3>
+          <p class="job-location">Perth, WA</p>
+          <p class="job-description">
+            Roof-mounted at optimal height for stronger signal, delivering a clearer picture and stable reception.
+            Weather-resistant installation built for long-term reliability.
+          </p>
+        </figcaption>
+      </figure>
+
+      <figure class="job-card">
+        <a href="Images/starlink-installation-eglinton-wa.jpg" class="job-lightbox"
+          data-caption="Starlink Install • Eglinton, WA">
+          <img src="Images/starlink-installation-eglinton-wa.jpg" alt="Starlink installation in Eglinton WA"
+            loading="lazy" decoding="async">
+        </a>
+        <figcaption class="job-info">
+          <h3>Starlink Install</h3>
+          <p class="job-location">Eglinton, WA</p>
+          <p class="job-description">
+            Roof mount installed, cable run secured and sealed, system tested for strong connection and tidy finish.
+          </p>
+        </figcaption>
+      </figure>
+
+      <figure class="job-card">
+        <a href="Images/home-wifi-upgrade.JPEG" class="job-lightbox" data-caption="Wi-Fi Upgrade • Yanchep, WA">
+          <img src="Images/home-wifi-upgrade.JPEG" alt="Home Wi-Fi upgrade in Yanchep WA" loading="lazy"
+            decoding="async">
+        </a>
+        <figcaption class="job-info">
+          <h3>Wi-Fi Upgrade</h3>
+          <p class="job-location">Yanchep, WA</p>
+          <p class="job-description">
+            Installed upgraded Wi-Fi hardware, improved coverage and performance, and verified speeds throughout the
+            home.
+          </p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop" data-close="true"></div>
+
+    <div class="lightbox-content" role="dialog" aria-modal="true">
+      <button class="lightbox-close" type="button" data-close="true" aria-label="Close image">✕</button>
+      <img id="lightbox-img" alt="">
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
   </div>
-</section>
 
-<!-- Lightbox Modal -->
-<div class="lightbox" id="lightbox" aria-hidden="true">
-  <div class="lightbox-backdrop" data-close="true"></div>
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Future Proof Antenna &amp; Cabling Services <span>T44288</span></p>
+  </footer>
 
-  <div class="lightbox-content" role="dialog" aria-modal="true">
-    <button class="lightbox-close" type="button" data-close="true">✕</button>
-    <img id="lightbox-img" alt="">
-    <p class="lightbox-caption" id="lightbox-caption"></p>
-  </div>
-</div>
+  <!-- Your existing scripts -->
+  <script src="script.js" defer></script>
 
-<!-- FOOTER -->
-<footer>
-  <p>&copy; 2025 Future Proof Antenna &amp; Cabling Services <span>T44288</span></p>
-</footer>
+  <!-- Lightbox JS -->
+  <script>
+    (function () {
+      const lightbox = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lightbox-img');
+      const lbCaption = document.getElementById('lightbox-caption');
 
-<!-- Your existing scripts -->
-<script src="script.js" defer></script>
+      let lastFocusedElement = null;
 
-<!-- Lightbox JS -->
-<script>
-  (function(){
-    const lightbox = document.getElementById('lightbox');
-    const lbImg = document.getElementById('lightbox-img');
-    const lbCaption = document.getElementById('lightbox-caption');
+      function openLightbox(src, caption, alt) {
+        lastFocusedElement = document.activeElement;
 
-    let lastFocusedElement = null;
+        lbImg.src = src;
+        lbImg.alt = alt || '';
+        lbCaption.textContent = caption || '';
 
-    function openLightbox(src, caption, alt){
-      lastFocusedElement = document.activeElement;
-
-      lbImg.src = src;
-      lbImg.alt = alt || '';
-      lbCaption.textContent = caption || '';
-
-      lightbox.classList.add('is-open');
-      lightbox.removeAttribute('aria-hidden');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeLightbox(){
-      if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
-        lastFocusedElement.focus();
+        lightbox.classList.add('is-open');
+        lightbox.removeAttribute('aria-hidden');
+        document.body.style.overflow = 'hidden';
       }
 
-      lightbox.classList.remove('is-open');
-      lightbox.setAttribute('aria-hidden', 'true');
+      function closeLightbox() {
+        lightbox.classList.remove('is-open');
+        lightbox.setAttribute('aria-hidden', 'true');
 
-      lbImg.src = '';
-      lbImg.alt = '';
-      lbCaption.textContent = '';
-      document.body.style.overflow = '';
-    }
+        lbImg.src = '';
+        lbImg.alt = '';
+        lbCaption.textContent = '';
+        document.body.style.overflow = '';
 
-    document.querySelectorAll('.job-lightbox').forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const img = link.querySelector('img');
-        const src = link.getAttribute('href');
-        const caption = link.dataset.caption || '';
-        const alt = img ? img.alt : '';
-        openLightbox(src, caption, alt);
+        if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+          lastFocusedElement.focus();
+        }
+      }
+
+      document.querySelectorAll('.job-lightbox').forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const img = link.querySelector('img');
+          const src = link.getAttribute('href');
+          const caption = link.dataset.caption || '';
+          const alt = img ? img.alt : '';
+          openLightbox(src, caption, alt);
+        });
       });
-    });
 
-    lightbox.addEventListener('click', (e) => {
-      if (e.target && e.target.dataset && e.target.dataset.close === 'true') {
-        closeLightbox();
-      }
-    });
+      lightbox.addEventListener('click', (e) => {
+        if (e.target && e.target.dataset && e.target.dataset.close === 'true') {
+          closeLightbox();
+        }
+      });
 
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && lightbox.classList.contains('is-open')) {
-        closeLightbox();
-      }
-    });
-  })();
-
-  (function(){
-  function closeLightbox(){ 
-    
-   }
-})();
-
-</script>
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('is-open')) {
+          closeLightbox();
+        }
+      });
+    })();
+  </script>
 
 </body>
+
 </html>
