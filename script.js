@@ -8,23 +8,31 @@ document.addEventListener("DOMContentLoaded", () => {
   if (navToggle && mobileNav) {
     navToggle.addEventListener("click", () => {
       mobileNav.classList.toggle("open");
+      navToggle.setAttribute("aria-expanded", mobileNav.classList.contains("open"));
     });
   }
 
-  // (You can add your other JS below if you want later)
-});
+  // === Lightbox (ONLY if it exists on the page) ===
+  const lightbox = document.querySelector(".lightbox");
 
+  // If no lightbox on this page, stop here (prevents errors)
+  if (!lightbox) return;
 
-// Close on backdrop or X
-lightbox.addEventListener('click', (e) => {
-  if (e.target.dataset.close === 'true') {
-    closeLightbox();
-  }
-});
+  const closeLightbox = () => {
+    lightbox.classList.remove("is-open");
+  };
 
-// Close on ESC
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && lightbox.classList.contains('is-open')) {
-    closeLightbox();
-  }
+  // Close on backdrop or X
+  lightbox.addEventListener("click", (e) => {
+    if (e.target.dataset.close === "true" || e.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  // Close on ESC
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && lightbox.classList.contains("is-open")) {
+      closeLightbox();
+    }
+  });
 });

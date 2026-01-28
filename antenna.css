@@ -1,0 +1,424 @@
+/* =========================================================
+   antenna.css  (ONLY affects antenna.html)
+   Works with:
+   - <body class="antenna-page">
+   - hero layout: .hero-inner.hero-antenna-layout + .hero-side + .hero-center
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   Page background (clean + professional)
+   --------------------------------------------------------- */
+body.antenna-page {
+  min-height: 100%;
+  background: #ffffff;
+  color: #0f172a;
+}
+
+/* ---------------------------------------------------------
+   Header layout fixes (only this page)
+   --------------------------------------------------------- */
+body.antenna-page header .header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Facebook circle */
+body.antenna-page .facebook-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+/* Icon size */
+body.antenna-page .facebook-link i {
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Logo sizing */
+body.antenna-page .logo {
+  height: 100px;
+  width: auto;
+  display: block;
+}
+
+/* Phone in header: hidden on desktop, shown on mobile */
+body.antenna-page .header-phone {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  body.antenna-page .header-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #070c13;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  body.antenna-page .header-phone i {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 390px) {
+  body.antenna-page .header-phone span {
+    display: none;
+  }
+
+  body.antenna-page .header-phone {
+    padding: 8px 10px;
+  }
+}
+
+/* ---------------------------------------------------------
+   HERO (Antenna) — match home (BLUE)
+   --------------------------------------------------------- */
+body.antenna-page .antenna-hero {
+  background: linear-gradient(to right, #004aad, #0077ff);
+  color: #ffffff;
+}
+
+body.antenna-page .hero {
+  padding: 70px 16px;
+}
+
+/* Headings */
+body.antenna-page .hero h1 {
+  font-size: 2.1rem;
+  line-height: 1.15;
+  margin: 0 0 12px;
+}
+
+body.antenna-page .hero p {
+  line-height: 1.55;
+  margin: 14px 0;
+  opacity: 0.95;
+}
+
+/* Rating line */
+body.antenna-page .rating-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0 18px;
+}
+
+body.antenna-page .stars {
+  letter-spacing: 2px;
+  font-size: 1rem;
+}
+
+body.antenna-page .rating-text {
+  font-size: 0.95rem;
+  opacity: 0.95;
+}
+
+/* CTA buttons */
+body.antenna-page .hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 16px 0 18px;
+}
+
+body.antenna-page .hero-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 10px 16px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.antenna-page .hero-cta.phone {
+  background: #ffffff;
+  color: #0b57d0;
+  border-color: #ffffff;
+}
+
+/* Hover */
+body.antenna-page .hero-cta:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+body.antenna-page .hero-cta.phone:hover {
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive hero sizes */
+@media (max-width: 600px) {
+  body.antenna-page .hero h1 {
+    font-size: 1.65rem;
+  }
+}
+
+/* ---------------------------------------------------------
+   Pricing packages (clean on white)
+   --------------------------------------------------------- */
+body.antenna-page .antenna-pricing {
+  list-style: none;
+  padding: 0;
+  margin: 18px auto 26px;
+  max-width: 680px;
+  width: 100%;
+  display: grid;
+  gap: 12px;
+}
+
+body.antenna-page .antenna-pricing li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 14px;
+
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 2px solid rgba(11, 94, 215, 0.25);
+}
+
+body.antenna-page .antenna-name {
+  color: #0f172a;
+  text-align: left;
+  line-height: 1.35;
+  font-size: 0.95rem;
+  opacity: 0.95;
+}
+
+body.antenna-page .antenna-price {
+  background: #ffffff;
+  color: #0b57d0;
+  font-weight: 900;
+  font-size: 1.05rem;
+  padding: 9px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Mobile pricing */
+@media (max-width: 480px) {
+  body.antenna-page .antenna-pricing {
+    max-width: 92%;
+  }
+
+  body.antenna-page .antenna-pricing li {
+    grid-template-columns: 1fr;
+  }
+
+  body.antenna-page .antenna-price {
+    justify-self: center;
+    margin-top: 6px;
+  }
+
+  body.antenna-page .antenna-name {
+    text-align: center;
+  }
+}
+
+/* Labels / callouts */
+body.antenna-page .section-label {
+  margin: 22px 0 10px;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+body.antenna-page .section-callout {
+  margin: 28px auto 14px;
+  padding: 10px 14px;
+  display: inline-block;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #ffffff; /* stays inside blue hero */
+}
+
+/* =========================================================
+   ANTENNA HERO: 3-COLUMN DESKTOP (CLEAN + STABLE)
+   ========================================================= */
+
+body.antenna-page .antenna-hero {
+  width: 100%;
+}
+
+/* Main hero wrapper */
+body.antenna-page .antenna-hero .hero-inner.hero-antenna-layout {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* Side images hidden on mobile/tablet */
+body.antenna-page .antenna-hero .hero-side {
+  display: none;
+}
+
+/* Center column content */
+body.antenna-page .antenna-hero .hero-center {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 1024px) {
+  body.antenna-page .antenna-hero .hero-inner.hero-antenna-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr 280px;
+    gap: 40px;
+    align-items: start;
+    overflow: hidden;
+  }
+
+  body.antenna-page .antenna-hero .hero-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Images inside fixed side containers */
+  body.antenna-page .antenna-hero .hero-side img {
+    width: auto;
+    height: auto;
+    max-width: 260px;
+    max-height: 380px;
+    object-fit: contain;
+    border-radius: 24px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    opacity: 0.92;
+  }
+
+  body.antenna-page .antenna-hero .rating-social,
+  body.antenna-page .antenna-hero .hero-actions {
+    justify-content: center;
+  }
+
+  body.antenna-page .antenna-hero .antenna-pricing {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ---------------------------------------------------------
+   FIX: make header + dropdown always sit above hero images
+   --------------------------------------------------------- */
+body.antenna-page header {
+  position: relative;
+  z-index: 9999;
+}
+
+body.antenna-page header nav,
+body.antenna-page header .header-container {
+  position: relative;
+  z-index: 9999;
+}
+
+body.antenna-page .antenna-hero {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================================
+   Antenna: show BOTH hero-side images side-by-side (mobile/tablet)
+   Works with your existing structure:
+   .hero-inner.hero-antenna-layout + .hero-side + .hero-center + .hero-side
+   ========================================================= */
+
+@media (max-width: 1023px) {
+  /* Turn the hero into a 2-col grid for images, then full-width content */
+  body.antenna-page .antenna-hero .hero-inner.hero-antenna-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "left right"
+      "center center";
+    gap: 12px;
+    align-items: start;
+  }
+
+  /* Make sure both side containers appear */
+  body.antenna-page .antenna-hero .hero-side {
+    display: block;
+    margin: 0;
+  }
+
+  /* Place left/right images */
+  body.antenna-page .antenna-hero .hero-side:first-of-type { grid-area: left; }
+  body.antenna-page .antenna-hero .hero-side:last-of-type  { grid-area: right; }
+
+  /* Center content under the images */
+  body.antenna-page .antenna-hero .hero-center {
+    grid-area: center;
+    margin-top: 8px;
+  }
+
+  /* Make images look good + same height */
+  body.antenna-page .antenna-hero .hero-side img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+  }
+}
+
+/* Super small phones: stack images */
+@media (max-width: 300px) {
+  body.antenna-page .antenna-hero .hero-inner.hero-antenna-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "left"
+      "right"
+      "center";
+  }
+
+  body.antenna-page .antenna-hero .hero-side img {
+    height: 200px;
+  }
+}
+
+/* === Antenna page header: stop absolute logo conflicts === */
+body.antenna-page header .header-container {
+  justify-content: space-between;
+}
+
+/* On antenna page only: make logo normal (not absolute) */
+body.antenna-page .logo {
+  position: static !important;
+  transform: none !important;
+  width: 175px;
+  height: auto;
+  max-width: 80%;
+}
+
+/* Keep facebook on the left, nav/hamburger on the right */
+body.antenna-page .facebook-link {
+  position: static !important;
+  transform: none !important;
+}

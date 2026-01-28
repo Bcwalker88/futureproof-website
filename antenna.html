@@ -5,84 +5,92 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO Title & Meta Description -->
+  <!-- SEO -->
   <title>TV Antenna Installation Perth | Digital Antennas | Future Proof</title>
   <meta name="description"
     content="Expert TV antenna installation in Perth's northern suburbs. Australian-made antennas, crystal clear reception, fully licensed. Free quotes available.">
-
-  <!-- Canonical URL -->
   <link rel="canonical" href="https://futureproofantenna.com.au/antenna.html">
+  <meta name="robots" content="index,follow,max-image-preview:large">
 
-  <!-- Favicon -->
+  <!-- Favicons -->
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-  <!-- Open Graph (Social Preview) -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Future Proof Antenna & Cabling">
   <meta property="og:title" content="TV Antenna Installation Perth | Digital Antennas | Future Proof">
   <meta property="og:description"
     content="Expert TV antenna installation in Perth's northern suburbs. Australian-made antennas, crystal clear reception, fully licensed. Free quotes available.">
   <meta property="og:url" content="https://futureproofantenna.com.au/antenna.html">
+  <meta property="og:image" content="https://futureproofantenna.com.au/Images/tv-antenna-installation-butler-wa.jpg">
+  <meta property="og:image:alt" content="TV antenna installation in Perth’s northern suburbs">
 
-  <!-- Service Schema (ANTENNA ONLY) -->
+  <!-- Service Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "TV Antenna Installation",
     "description": "Professional TV antenna installation and digital antenna upgrades across Perth’s northern suburbs.",
+    "serviceType": "TV Antenna Installation",
+    "areaServed": "Perth, WA",
     "provider": {
       "@type": "LocalBusiness",
       "name": "Future Proof Antenna & Cabling Services",
-      "telephone": "+61 493 819 163",
-      "areaServed": {
-        "@type": "AdministrativeArea",
-        "name": "Perth, WA"
-      }
-    },
-    "areaServed": "Perth, WA",
-    "serviceType": "TV Antenna Installation"
+      "telephone": "+61 493 819 163"
+    }
   }
   </script>
 
-  <!-- Google tag (Google Ads) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17678695746"></script>
+  <!-- Google tag (GA4 + Google Ads) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5PS6H8108"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
+    gtag('config', 'G-H5PS6H8108');
     gtag('config', 'AW-17678695746');
   </script>
 
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <!-- Styles -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="antenna.css">
 </head>
 
-
-
-
-<body>
+<body class="antenna-page">
 
   <header>
     <div class="header-container">
-      <img class="logo" src="Images/Untitled design.png" alt="Future Proof Logo">
 
-      <div class="header-icons">
-        <img src="Images/reyee.png" class="header-icon">
-        <img src="Images/FOP_Made_in_Australia_2.1_blank 4.png" class="header-icon">
-        <img src="Images/Ubiquiti_logo_PNG_(1).png" class="header-icon">
-      </div>
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/futureproofantenna" target="_blank" rel="noopener" class="facebook-link"
+        aria-label="Visit us on Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
 
-      <button class="nav-toggle">☰</button>
+      <!-- Logo -->
+      <a href="index.html" aria-label="Go to homepage">
+        <img class="logo" src="Images/future-proof-logo.png" alt="Future Proof Antenna & Cabling">
+      </a>
 
-      <nav class="main-nav">
+
+      <!-- Hamburger -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"
+        aria-controls="mobile-nav">☰</button>
+
+      <!-- Desktop nav -->
+      <nav class="main-nav" aria-label="Main navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
 
           <li class="dropdown">
-            <a class="dropbtn">Services ▾</a>
+            <a href="#" class="dropbtn">Services ▾</a>
             <div class="dropdown-content">
-              <a href="antenna.html">Antenna Installation</a>
+              <a href="antenna.html" aria-current="page">Antenna Installation</a>
               <a href="Starlink.html">Starlink Install</a>
               <a href="HomeWifi.html">Wi-Fi Upgrades</a>
               <a href="NBN.html">NBN Troubleshooting</a>
@@ -97,12 +105,12 @@
     </div>
 
     <!-- Mobile nav -->
-    <div class="mobile-nav">
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
       <ul>
         <li><a href="index.html#home">Home</a></li>
 
         <li class="mobile-group-title">Services</li>
-        <li><a href="antenna.html">Antenna Installation</a></li>
+        <li><a href="antenna.html" aria-current="page">Antenna Installation</a></li>
         <li><a href="Starlink.html">Starlink Installation</a></li>
         <li><a href="HomeWifi.html">Home &amp; Wi-Fi Upgrades</a></li>
         <li><a href="NBN.html">NBN Relocation &amp; Troubleshooting</a></li>
@@ -110,63 +118,81 @@
         <li><a href="TVMount.html">TV Wall Mounting</a></li>
         <li><a href="Quote.html">Request a Quote</a></li>
       </ul>
-    </div>
-
+    </nav>
   </header>
 
   <main>
+    <section class="hero page-single-hero antenna-hero">
+      <div class="hero-inner hero-antenna-layout">
 
-    <section class="hero page-single-hero">
-      <h1>Antenna Installation Services</h1>
-      <h2>What We Offer</h2>
+        
 
-      <p>
-        We supply and install high-quality digital TV antennas, designed for Perth’s reception conditions and coastal
-        environments.
-        Whether your existing antenna is outdated, damaged, or providing weak reception, we can install a new system
-        that delivers crystal-clear TV channels across your home.
-      </p>
+        <!-- LEFT IMAGE (desktop only) -->
+        <div class="hero-side hero-side-left">
+          <img src="images/tv-antenna-installation-butler-wa.jpg" alt="TV antenna installation Perth" loading="lazy">
+        </div>
 
-      <p>
-        Poor picture quality, pixelation, or missing channels often come from old antennas, faulty splitters, corroded
-        cabling, or incorrect mounting height.
-        We assess every property professionally and install the right antenna for your location to ensure the strongest
-        and most reliable signal.
-      </p>
+        <!-- CENTER CONTENT -->
+        <div class="hero-center">
 
-      <p><strong>We install:</strong></p>
+          <h1>TV Antenna Installation Services</h1>
 
-      <p>
-        • OzLog antennas (excellent all-round performance)<br>
-        • Digitek antennas (cost-effective and reliable)<br>
-        • Hills Black Arrow — premium, Australian-made antenna<br>
-        • Tru-Spec — premium Australian-made antenna
-      </p>
+          <div class="rating-social">
+            <span class="stars" aria-label="5 star rating">★★★★★</span>
+            <span class="rating-text">5-Star Rated Local Business</span>
+          </div>
 
-      <p><strong>We also handle:</strong></p>
+          <div class="hero-actions">
+            <a href="tel:0493819163" class="hero-cta phone">📞 0493 819 163</a>
+            <a href="Quote.html" class="hero-cta quote">📝 Request a Quote</a>
+          </div>
 
-      <p>
-        • Full tuning and reception testing with signal meters<br>
-        • Replacing old, damaged, or water-damaged cabling<br>
-        • Installing new TV points and upgrading splitters<br>
-        • Correct roof mounting for best reception (valley mount or flashing mount)<br>
-        • Fixing interference issues from 4G/5G towers with proper filtering
-      </p>
+          <p>
+            We install digital TV antennas across Perth’s northern suburbs, chosen for local reception conditions and
+            coastal environments. If your antenna is outdated or struggling with signal quality, we’ll install the right
+            system for clear, reliable TV reception throughout your home.
+            <br><br>
+            Pixelation, missing channels, and signal drop-outs are commonly caused by old antennas, faulty cabling, or
+            poor mounting. Every job is professionally assessed and tuned to suit your location, ensuring the best
+            possible signal and long-term reliability.
+          </p>
 
-      <p><strong>Prices start from $135</strong></p>
-      <p>⭐ Fully licensed &amp; insured</p>
+          <p>⭐ Fully licensed &amp; insured</p>
 
+          <h3 class="section-secrion">Antenna Options</h3>
+          <ul class="antenna-pricing">
+            <li>
+              <span class="antenna-name">
+                OzLog antennas or Digitek antennas <br>
+                (Excellent all-round, cost-effective and reliable performance)
+              </span>
+              <span class="antenna-price">$325</span>
+            </li>
 
-      <div class="hero-contact">
-        <a class="hero-phone" href="tel:0493819163">📞 0493 819 163</a>
-        <a class="hero-email" href="Quote.html">📩 Request a Quote</a>
+            <li>
+              <span class="antenna-name">
+                Hills Black Arrow or Tru-Spec <br>
+                (Premium, Australian-made Antenna)
+              </span>
+              <span class="antenna-price premium">$375</span>
+            </li>
+          </ul>
+
+        </div>
+
+        <!-- RIGHT IMAGE (desktop only) -->
+        <div class="hero-side hero-side-right">
+          <img src="images/Clarkson antenna installation.jpeg" alt="Antenna repair and replacement" loading="lazy">
+        </div>
+
       </div>
     </section>
+
 
   </main>
 
   <footer>
-    <p>&copy; 2025 Future Proof Antenna & Cabling Services <span>T44288</span></p>
+    <p>&copy; 2025 Future Proof Antenna &amp; Cabling Services <span>T44288</span></p>
   </footer>
 
   <script src="script.js" defer></script>

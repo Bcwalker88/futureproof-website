@@ -2,27 +2,25 @@
 <html lang="en-AU">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO Title & Meta Description (UPDATED) -->
+  <!-- SEO -->
   <title>Get a Quote Perth | Antennas, Starlink & Data Cabling</title>
   <meta name="description"
-    content="Request a fast quote for TV antennas, Starlink installs, Wi-Fi upgrades or data cabling in Perth. Servicing northern suburbs from Lancelin to Fremantle.">
+    content="Request a fast quote for TV antennas, Starlink installs, Wi-Fi upgrades or data cabling in Perth. Servicing northern suburbs from Lancelin to Fremantle." />
+  <link rel="canonical" href="https://futureproofantenna.com.au/quote.html" />
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://futureproofantenna.com.au/quote.html">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
   <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Get a Quote Perth | Antennas, Starlink & Data Cabling">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Get a Quote Perth | Antennas, Starlink & Data Cabling" />
   <meta property="og:description"
-    content="Fast quotes for antennas, Starlink, Wi-Fi and data cabling across Perth’s northern suburbs.">
-  <meta property="og:url" content="https://futureproofantenna.com.au/quote.html">
+    content="Fast quotes for antennas, Starlink, Wi-Fi and data cabling across Perth’s northern suburbs." />
+  <meta property="og:url" content="https://futureproofantenna.com.au/quote.html" />
 
   <!-- Google tag (GA4 + Google Ads) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5PS6H8108"></script>
@@ -34,108 +32,122 @@
     gtag('config', 'AW-17678695746');
   </script>
 
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
   <!-- Styles -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
-
-
-
 
 <body>
 
   <header>
     <div class="header-container">
-      <img class="logo" src="Images/Untitled design.png" alt="Future Proof Logo">
 
-      <div class="header-icons">
-        <img src="Images/reyee.png" alt="Reyee Logo" class="header-icon">
-        <img src="Images/FOP_Made_in_Australia_2.1_blank 4.png" alt="Made in Australia" class="header-icon">
-        <img src="Images/Ubiquiti_logo_PNG_(1).png" alt="Ubiquiti Logo" class="header-icon">
-      </div>
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/futureproofantenna" target="_blank" rel="noopener" class="facebook-link"
+        aria-label="Visit us on Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
 
-      <!-- Hamburger for mobile -->
-      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <!-- Logo -->
+      <a href="index.html">
+        <img class="logo" src="Images/future-proof-logo.png" alt="Future Proof Antenna & Cabling" />
+      </a>
 
-      <!-- Desktop nav -->
+      <!-- Hamburger -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"
+        aria-controls="mobile-nav">☰</button>
+
+      <!-- Desktop Nav -->
       <nav class="main-nav">
         <ul>
           <li><a href="index.html#home">Home</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropbtn">Services ▾</a>
-            <div class="dropdown-content">
-              <a href="antenna.html">Antenna Installation</a>
-              <a href="Starlink.html">Starlink Installation</a>
-              <a href="HomeWifi.html">Home &amp; Wi-Fi Upgrades</a>
-              <a href="NBN.html">NBN Relocation &amp; Troubleshooting</a>
-              <a href="DataIT.html">Data Cabling &amp; I.T. Services</a>
-            </div>
+
           </li>
-          <li><a href="Quote.html">Request a Quote</a></li>
         </ul>
       </nav>
     </div>
 
-    <!-- Mobile nav -->
-    <nav class="mobile-nav">
+    <!-- Mobile Nav -->
+    <nav class="mobile-nav" id="mobile-nav">
       <ul>
         <li><a href="index.html#home">Home</a></li>
-        <li><a href="antenna.html">Antenna Installation</a></li>
-        <li><a href="Starlink.html">Starlink Installation</a></li>
-        <li><a href="HomeWifi.html">Home &amp; Wi-Fi Upgrades</a></li>
-        <li><a href="NBN.html">NBN Relocation &amp; Troubleshooting</a></li>
-        <li><a href="Quote.html">Request a Quote</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <section class="quote-page">
-      <h1>Request a Quote</h1>
-      <p class="quote-intro">
-        Please fill in your details below and we’ll get back to you with options tailored to your property.
-      </p>
+      <div class="quote-wrap">
+        <h1>Request a Quote</h1>
+        <p class="quote-intro">
+          Fill in your details below and we’ll get back to you with options tailored to your property.
+        </p>
 
-      <form id="quote-form" action="https://formspree.io/f/mjkpvyop" method="POST"
-        data-fs-redirect="https://www.futureproofantenna.com.au/thankyou.html">
-        <div class="form-row">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="Name" autocomplete="name" required>
-        </div>
+        <!-- SINGLE FORM ONLY -->
+        <form id="quote-form" action="https://formspree.io/f/mjkpvyop" method="POST"
+          data-redirect="https://futureproofantenna.com.au/thankyou.html">
 
-        <div class="form-row">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="Email" autocomplete="email" required>
-        </div>
+          <div class="form-row">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="Name" required />
+          </div>
 
-        <div class="form-row">
-          <label for="phone">Phone Number:</label>
-          <input type="tel" id="phone" name="Phone" pattern="[0-9]{10}" placeholder="04XXXXXXXX" required>
-        </div>
+          <div class="form-row">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="Email" required />
+          </div>
 
-        <div class="form-row">
-          <label for="address">Address:</label>
-          <input type="text" id="address" name="Address" autocomplete="street-address" required>
-        </div>
+          <div class="form-row">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="Phone" placeholder="04XXXXXXXX" required />
+          </div>
 
-        <div class="form-row">
-          <label for="service">Service:</label>
-          <select id="service" name="Service">
-            <option value="Antenna Installation">Antenna Installation</option>
-            <option value="TV Wall Mounting">TV Wall Mounting</option>
-            <option value="Starlink Install - Home &amp; Business">Starlink Install - Home &amp; Business</option>
-            <option value="Home &amp; Business Wi-Fi Upgrades">Home &amp; Business Wi-Fi Upgrades</option>
-            <option value="NBN Relocation &amp; Troubleshooting">NBN Relocation &amp; Troubleshooting</option>
-          </select>
-        </div>
+          <div class="form-row">
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="Address" autocomplete="street-address" required />
+          </div>
 
-        <div class="form-row">
-          <label for="message">Message:</label>
-          <textarea id="message" name="Message" rows="4"
-            placeholder="Tell us a bit about the job (single / double storey, location, issues, etc.)"></textarea>
-        </div>
+          <div class="form-row">
+            <label for="roof-type">Roof Type:</label>
+            <select id="roof-type" name="Roof Type" required>
+              <option value="">Select roof type</option>
+              <option value="Tin">Tin (Colorbond / Metal)</option>
+              <option value="Tile">Tile</option>
+              <option value="Other">Other / Not sure</option>
+            </select>
+          </div>
 
-        <button type="submit" class="btn-quote-submit">Submit</button>
-      </form>
+          <div class="form-row">
+            <label for="storeys">Number of Storeys:</label>
+            <select id="storeys" name="Storeys" required>
+              <option value="">Select storeys</option>
+              <option value="Single">Single storey</option>
+              <option value="Double">Double storey</option>
+              <option value="Three">Three storey</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="service">Service Required:</label>
+            <select id="service" name="Service">
+              <option>Antenna Installation</option>
+              <option>TV Wall Mounting</option>
+              <option>Starlink Installation</option>
+              <option>Wi-Fi Upgrade</option>
+              <option>NBN Relocation / Troubleshooting</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Additional Details:</label>
+            <textarea id="message" name="Message" rows="4" placeholder="Anything else we should know?"></textarea>
+          </div>
+
+          <button type="submit" class="btn-quote-submit">Submit Quote Request</button>
+        </form>
+      </div>
     </section>
   </main>
 
@@ -146,6 +158,7 @@
     </p>
   </footer>
 
+  <script src="script.js" defer></script>
 </body>
 
 </html>

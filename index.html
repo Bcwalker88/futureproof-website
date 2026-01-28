@@ -5,30 +5,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO Title & Meta Description -->
+  <!-- SEO -->
   <title>Antenna Installation Perth Northern Suburbs | Future Proof Antenna</title>
-  <meta name="description" content="Professional TV antenna installation, Starlink setup & whole-home Wi-Fi upgrades across Perth’s northern suburbs. Licensed & insured. Call 0493 819 163.">
-
-  <!-- Canonical URL -->
+  <meta name="description"
+    content="Professional TV antenna installation, Starlink setup & whole-home Wi-Fi upgrades across Perth’s northern suburbs. Licensed & insured. Call 0493 819 163.">
   <link rel="canonical" href="https://futureproofantenna.com.au/">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#0b0b0b">
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-  <!-- Open Graph (Social Preview) -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Future Proof Antenna & Cabling">
   <meta property="og:title" content="Antenna Installation Perth Northern Suburbs | Future Proof Antenna">
-  <meta property="og:description" content="Professional TV antenna installation, Starlink setup & whole-home Wi-Fi upgrades across Perth’s northern suburbs.">
+  <meta property="og:description"
+    content="Professional TV antenna installation, Starlink setup & whole-home Wi-Fi upgrades across Perth’s northern suburbs.">
   <meta property="og:url" content="https://futureproofantenna.com.au/">
   <meta property="og:image" content="https://futureproofantenna.com.au/Images/tv-antenna-installation-butler-wa.jpg">
-  <meta property="og:image:alt" content="TV antenna installation in Perth’s northern suburbs by Future Proof Antenna & Cabling">
+  <meta property="og:image:alt"
+    content="TV antenna installation in Perth’s northern suburbs by Future Proof Antenna & Cabling">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Antenna Installation Perth Northern Suburbs | Future Proof Antenna">
+  <meta name="twitter:description"
+    content="Professional TV antenna installation, Starlink setup & whole-home Wi-Fi upgrades across Perth’s northern suburbs.">
+  <meta name="twitter:image"
+    content="https://futureproofantenna.com.au/Images/tv-antenna-installation-butler-wa.jpg">
 
   <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Local Business Schema -->
   <script type="application/ld+json">
@@ -37,7 +46,8 @@
     "@type": "LocalBusiness",
     "name": "Future Proof Antenna & Cabling Services",
     "url": "https://futureproofantenna.com.au/",
-    "logo": "https://futureproofantenna.com.au/Images/Untitled design.png",
+    "logo": "https://futureproofantenna.com.au/Images/Untitled%20design.png",
+    "image": "https://futureproofantenna.com.au/Images/tv-antenna-installation-butler-wa.jpg",
     "telephone": "+61 493 819 163",
     "address": {
       "@type": "PostalAddress",
@@ -45,16 +55,24 @@
       "addressRegion": "WA",
       "addressCountry": "AU"
     },
-    "priceRange": "$$"
+    "priceRange": "$$",
+    "sameAs": [
+      "https://www.facebook.com/futureproofantenna"
+    ]
   }
   </script>
 
-  <!-- Google Ads -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17678695746"></script>
+  <!-- Google tag (GA4 + Google Ads) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5PS6H8108"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+
+    // Google Analytics 4
+    gtag('config', 'G-H5PS6H8108');
+
+    // Google Ads
     gtag('config', 'AW-17678695746');
   </script>
 
@@ -68,22 +86,24 @@
   <!-- HEADER -->
   <header>
     <div class="header-container">
-      <a href="https://www.facebook.com/futureproofantenna" target="_blank" rel="noopener" class="facebook-link"
-        aria-label="Visit us on Facebook">
-        <i class="fab fa-facebook-f"></i>
+      <a href="https://www.facebook.com/futureproofantenna" target="_blank" rel="noopener"
+        class="facebook-link" aria-label="Visit us on Facebook">
+        <i class="fab fa-facebook-f" aria-hidden="true"></i>
       </a>
 
       <a href="/" aria-label="Go to homepage">
-        <img src="Images/Untitled design.png" alt="Future Proof Antenna & Cabling" class="logo">
+        <img src="Images/future-proof-logo.png" alt="Future Proof Antenna & Cabling" class="logo">
       </a>
 
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <button class="nav-toggle" aria-label="Toggle navigation"
+        aria-expanded="false" aria-controls="mobile-nav">☰</button>
 
       <nav class="main-nav" aria-label="Main navigation">
         <ul>
           <li><a href="#home">Home</a></li>
+
           <li class="dropdown">
-            <a href="#" class="dropbtn">Services ▾</a>
+            <a href="#" class="dropbtn" aria-haspopup="true" aria-expanded="false">Services ▾</a>
             <div class="dropdown-content">
               <a href="antenna.html">Antenna Installation</a>
               <a href="Starlink.html">Starlink Installation</a>
@@ -93,13 +113,14 @@
               <a href="TVMount.html">TV Mounting</a>
             </div>
           </li>
+
           <li><a href="Quote.html">Request a Quote</a></li>
         </ul>
       </nav>
     </div>
 
-    <!-- Mobile nav (slides down) -->
-    <nav class="mobile-nav" aria-label="Mobile navigation">
+    <!-- Mobile nav -->
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
       <ul>
         <li><a href="#home">Home</a></li>
 
@@ -153,18 +174,20 @@
     <p>Recent antenna installs, Starlink setups and cabling work across Perth’s northern suburbs.</p>
 
     <div class="jobs-grid">
+
       <figure class="job-card">
         <a href="Images/tv-antenna-installation-butler-wa.jpg" class="job-lightbox"
           data-caption="TV Antenna Upgrade • Butler, WA">
-          <img src="Images/tv-antenna-installation-butler-wa.jpg" alt="TV antenna installation in Butler WA"
+          <img src="Images/tv-antenna-installation-butler-wa.jpg"
+            alt="TV antenna installation in Butler WA"
             loading="lazy" decoding="async">
         </a>
         <figcaption class="job-info">
           <h3>TV Antenna Upgrade</h3>
           <p class="job-location">Butler, WA</p>
           <p class="job-description">
-            Removed old antenna, installed new premium antenna with a proper flashing kit, replaced lead-in cable and
-            tested all TV points.
+            Removed old antenna, installed new premium antenna with flashing kit, replaced lead-in
+            cable and tested all TV points.
           </p>
         </figcaption>
       </figure>
@@ -172,15 +195,15 @@
       <figure class="job-card">
         <a href="Images/tv-antenna-installation-perth-wa.JPEG" class="job-lightbox"
           data-caption="TV Antenna Upgrade • Perth, WA">
-          <img src="Images/tv-antenna-installation-perth-wa.JPEG" alt="TV antenna installation in Perth WA"
+          <img src="Images/tv-antenna-installation-perth-wa.JPEG"
+            alt="TV antenna installation in Perth WA"
             loading="lazy" decoding="async">
         </a>
         <figcaption class="job-info">
           <h3>TV Antenna Upgrade</h3>
           <p class="job-location">Perth, WA</p>
           <p class="job-description">
-            Roof-mounted at optimal height for stronger signal, delivering a clearer picture and stable reception.
-            Weather-resistant installation built for long-term reliability.
+            Roof-mounted at optimal height for stronger signal and stable reception.
           </p>
         </figcaption>
       </figure>
@@ -188,41 +211,44 @@
       <figure class="job-card">
         <a href="Images/starlink-installation-eglinton-wa.jpg" class="job-lightbox"
           data-caption="Starlink Install • Eglinton, WA">
-          <img src="Images/starlink-installation-eglinton-wa.jpg" alt="Starlink installation in Eglinton WA"
+          <img src="Images/starlink-installation-eglinton-wa.jpg"
+            alt="Starlink installation in Eglinton WA"
             loading="lazy" decoding="async">
         </a>
         <figcaption class="job-info">
           <h3>Starlink Install</h3>
           <p class="job-location">Eglinton, WA</p>
           <p class="job-description">
-            Roof mount installed, cable run secured and sealed, system tested for strong connection and tidy finish.
+            Roof mount installed, cable run secured and sealed, system tested for strong connection.
           </p>
         </figcaption>
       </figure>
 
       <figure class="job-card">
-        <a href="Images/home-wifi-upgrade.JPEG" class="job-lightbox" data-caption="Wi-Fi Upgrade • Yanchep, WA">
-          <img src="Images/home-wifi-upgrade.JPEG" alt="Home Wi-Fi upgrade in Yanchep WA" loading="lazy"
-            decoding="async">
+        <a href="Images/home-wifi-upgrade.JPEG" class="job-lightbox"
+          data-caption="Wi-Fi Upgrade • Yanchep, WA">
+          <img src="Images/home-wifi-upgrade.JPEG"
+            alt="Home Wi-Fi upgrade in Yanchep WA"
+            loading="lazy" decoding="async">
         </a>
         <figcaption class="job-info">
           <h3>Wi-Fi Upgrade</h3>
           <p class="job-location">Yanchep, WA</p>
           <p class="job-description">
-            Installed upgraded Wi-Fi hardware, improved coverage and performance, and verified speeds throughout the
-            home.
+            Installed upgraded Wi-Fi hardware and verified speeds throughout the home.
           </p>
         </figcaption>
       </figure>
+
     </div>
   </section>
 
-  <!-- Lightbox Modal -->
+  <!-- Lightbox -->
   <div class="lightbox" id="lightbox" aria-hidden="true">
     <div class="lightbox-backdrop" data-close="true"></div>
-
     <div class="lightbox-content" role="dialog" aria-modal="true">
-      <button class="lightbox-close" type="button" data-close="true" aria-label="Close image">✕</button>
+      <button class="lightbox-close" type="button" data-close="true"
+        aria-label="Close image">✕</button>
       <img id="lightbox-img" alt="">
       <p class="lightbox-caption" id="lightbox-caption"></p>
     </div>
@@ -233,25 +259,21 @@
     <p>&copy; 2025 Future Proof Antenna &amp; Cabling Services <span>T44288</span></p>
   </footer>
 
-  <!-- Your existing scripts -->
+  <!-- Scripts -->
   <script src="script.js" defer></script>
 
-  <!-- Lightbox JS -->
   <script>
     (function () {
       const lightbox = document.getElementById('lightbox');
       const lbImg = document.getElementById('lightbox-img');
       const lbCaption = document.getElementById('lightbox-caption');
-
       let lastFocusedElement = null;
 
       function openLightbox(src, caption, alt) {
         lastFocusedElement = document.activeElement;
-
         lbImg.src = src;
         lbImg.alt = alt || '';
         lbCaption.textContent = caption || '';
-
         lightbox.classList.add('is-open');
         lightbox.removeAttribute('aria-hidden');
         document.body.style.overflow = 'hidden';
@@ -260,35 +282,30 @@
       function closeLightbox() {
         lightbox.classList.remove('is-open');
         lightbox.setAttribute('aria-hidden', 'true');
-
         lbImg.src = '';
         lbImg.alt = '';
         lbCaption.textContent = '';
         document.body.style.overflow = '';
-
-        if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
-          lastFocusedElement.focus();
-        }
+        if (lastFocusedElement) lastFocusedElement.focus();
       }
 
       document.querySelectorAll('.job-lightbox').forEach(link => {
-        link.addEventListener('click', (e) => {
+        link.addEventListener('click', e => {
           e.preventDefault();
           const img = link.querySelector('img');
-          const src = link.getAttribute('href');
-          const caption = link.dataset.caption || '';
-          const alt = img ? img.alt : '';
-          openLightbox(src, caption, alt);
+          openLightbox(
+            link.getAttribute('href'),
+            link.dataset.caption || '',
+            img ? img.alt : ''
+          );
         });
       });
 
-      lightbox.addEventListener('click', (e) => {
-        if (e.target && e.target.dataset && e.target.dataset.close === 'true') {
-          closeLightbox();
-        }
+      lightbox.addEventListener('click', e => {
+        if (e.target.dataset.close === 'true') closeLightbox();
       });
 
-      document.addEventListener('keydown', (e) => {
+      document.addEventListener('keydown', e => {
         if (e.key === 'Escape' && lightbox.classList.contains('is-open')) {
           closeLightbox();
         }
@@ -297,5 +314,4 @@
   </script>
 
 </body>
-
 </html>
