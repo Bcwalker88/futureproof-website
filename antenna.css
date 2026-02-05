@@ -422,3 +422,23 @@ body.antenna-page .facebook-link {
   position: static !important;
   transform: none !important;
 }
+
+/* === Antenna page: force centered logo === */
+body.antenna-page header .header-container {
+  position: relative;
+}
+
+/* Center logo regardless of side items */
+body.antenna-page header .logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Ensure FB + nav stay clickable */
+body.antenna-page .facebook-link,
+body.antenna-page .main-nav,
+body.antenna-page .nav-toggle {
+  position: relative;
+  z-index: 2;
+}
