@@ -1,444 +1,696 @@
-/* =========================================================
-   antenna.css  (ONLY affects antenna.html)
-   Works with:
-   - <body class="antenna-page">
-   - hero layout: .hero-inner.hero-antenna-layout + .hero-side + .hero-center
-   ========================================================= */
+/* antenna.css — bespoke styling for antenna.html */
 
-/* ---------------------------------------------------------
-   Page background (clean + professional)
-   --------------------------------------------------------- */
+:root {
+  --antenna-midnight: #010712;
+  --antenna-indigo: #061430;
+  --antenna-azure: #0b5dff;
+  --antenna-cyan: #53d8ff;
+  --antenna-soft: #f5f7ff;
+  --antenna-slate: #0f172a;
+}
+
 body.antenna-page {
-  min-height: 100%;
-  background: #ffffff;
-  color: #0f172a;
+  background: var(--antenna-midnight);
+  color: var(--antenna-soft);
+  margin: 0;
 }
 
-/* ---------------------------------------------------------
-   Header layout fixes (only this page)
-   --------------------------------------------------------- */
-body.antenna-page header .header-container {
-  display: flex;
+body.antenna-page header {
+  background: rgba(0, 0, 0, 0.55);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 70;
+  backdrop-filter: blur(14px);
+}
+
+body.antenna-page main {
+  flex: 1 0 auto;
+}
+
+/* HERO -------------------------------------------------- */
+.antenna-hero {
+  position: relative;
+  padding: 140px 20px 110px;
+  overflow: hidden;
+  color: var(--antenna-soft);
+  background: radial-gradient(circle at 10% 15%, rgba(83, 216, 255, 0.35), transparent 45%),
+              radial-gradient(circle at 80% 0%, rgba(11, 93, 255, 0.3), transparent 50%),
+              linear-gradient(130deg, #030a1b, #04102a 60%, #062357);
+}
+
+.antenna-hero .hero-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 30% 25%, rgba(83, 216, 255, 0.3), transparent 55%);
+}
+
+.antenna-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 48px;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
 }
 
-/* Facebook circle */
-body.antenna-page .facebook-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 999px;
-  text-decoration: none;
+.hero-copy h1 {
+  margin: 16px 0;
+  font-size: clamp(2.4rem, 4vw, 3.5rem);
 }
 
-/* Icon size */
-body.antenna-page .facebook-link i {
-  font-size: 18px;
-  line-height: 1;
+.hero-kicker {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 0.85rem;
+  margin: 0;
+  color: rgba(245, 247, 255, 0.75);
 }
 
-/* Logo sizing */
-body.antenna-page .logo {
-  height: 100px;
-  width: auto;
+.hero-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(245, 247, 255, 0.78);
+}
+
+.hero-proofline,
+.hero-callout {
+  margin: 10px 0 0;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: rgba(245, 247, 255, 0.9);
+}
+
+.hero-proofline {
+  font-weight: 700;
+}
+
+.hero-review {
+  margin: 14px 0 4px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(83, 216, 255, 0.4);
+  background: rgba(2, 10, 32, 0.55);
+}
+
+.hero-review p {
+  margin: 0;
+  color: rgba(245, 247, 255, 0.96);
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.hero-review cite {
   display: block;
+  margin-top: 8px;
+  font-style: normal;
+  font-size: 0.88rem;
+  color: rgba(245, 247, 255, 0.78);
 }
 
-/* Phone in header: hidden on desktop, shown on mobile */
-body.antenna-page .header-phone {
-  display: none;
+.hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 14px;
+  margin: 24px 0 18px;
 }
 
-@media (max-width: 768px) {
-  body.antenna-page .header-phone {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 12px;
-    border-radius: 999px;
-    background: #ffffff;
-    color: #070c13;
-    font-weight: 700;
-    font-size: 0.85rem;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-
-  body.antenna-page .header-phone i {
-    font-size: 0.9rem;
-  }
+.hero-metric {
+  padding: 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(2, 10, 32, 0.45);
 }
 
-@media (max-width: 390px) {
-  body.antenna-page .header-phone span {
-    display: none;
-  }
-
-  body.antenna-page .header-phone {
-    padding: 8px 10px;
-  }
+.metric-value {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 
-/* ---------------------------------------------------------
-   HERO (Antenna) — match home (BLUE)
-   --------------------------------------------------------- */
-body.antenna-page .antenna-hero {
-  background: linear-gradient(to right, #004aad, #0077ff);
-  color: #ffffff;
+.metric-label {
+  margin: 6px 0 0;
+  font-size: 0.9rem;
+  color: rgba(245, 247, 255, 0.72);
 }
 
-body.antenna-page .hero {
-  padding: 70px 16px;
-}
-
-/* Headings */
-body.antenna-page .hero h1 {
-  font-size: 2.1rem;
-  line-height: 1.15;
-  margin: 0 0 12px;
-}
-
-body.antenna-page .hero p {
-  line-height: 1.55;
-  margin: 14px 0;
-  opacity: 0.95;
-}
-
-/* Rating line */
-body.antenna-page .rating-social {
+.hero-actions {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin: 12px 0 18px;
-}
-
-body.antenna-page .stars {
-  letter-spacing: 2px;
-  font-size: 1rem;
-}
-
-body.antenna-page .rating-text {
-  font-size: 0.95rem;
-  opacity: 0.95;
-}
-
-/* CTA buttons */
-body.antenna-page .hero-actions {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
   flex-wrap: wrap;
-  margin: 16px 0 18px;
+  gap: 14px;
+  margin: 22px 0;
 }
 
-body.antenna-page .hero-cta {
+.hero-cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  min-height: 46px;
-  padding: 10px 16px;
-  border-radius: 14px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: var(--antenna-soft);
   text-decoration: none;
-  font-weight: 700;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  background: rgba(255, 255, 255, 0.14);
-  color: #ffffff;
-  transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-body.antenna-page .hero-cta.phone {
-  background: #ffffff;
-  color: #0b57d0;
-  border-color: #ffffff;
+.hero-cta.phone {
+  background: var(--antenna-soft);
+  color: var(--antenna-azure);
+  border-color: transparent;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
 }
 
-/* Hover */
-body.antenna-page .hero-cta:hover {
-  transform: translateY(-2px);
-  opacity: 0.95;
+.hero-cta.compare {
+  background: rgba(255,255,255,0.15);
 }
 
-body.antenna-page .hero-cta.phone:hover {
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
-}
+.hero-cta:hover { transform: translateY(-2px); }
 
-/* Responsive hero sizes */
-@media (max-width: 600px) {
-  body.antenna-page .hero h1 {
-    font-size: 1.65rem;
-  }
-}
-
-/* ---------------------------------------------------------
-   Pricing packages (clean on white)
-   --------------------------------------------------------- */
-body.antenna-page .antenna-pricing {
+.hero-checklist {
   list-style: none;
   padding: 0;
-  margin: 18px auto 26px;
-  max-width: 680px;
-  width: 100%;
-  display: grid;
-  gap: 12px;
-}
-
-body.antenna-page .antenna-pricing li {
-  display: grid;
-  grid-template-columns: 1fr auto;
+  margin: 10px 0 0;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 14px;
-
-  padding: 14px 16px;
-  border-radius: 16px;
-  background: #ffffff;
-  border: 2px solid rgba(11, 94, 215, 0.25);
+  gap: 8px;
+  text-align: center;
+  color: rgba(245, 247, 255, 0.82);
 }
 
-body.antenna-page .antenna-name {
-  color: #0f172a;
-  text-align: left;
-  line-height: 1.35;
-  font-size: 0.95rem;
-  opacity: 0.95;
+.hero-checklist li {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-body.antenna-page .antenna-price {
-  background: #ffffff;
-  color: #0b57d0;
-  font-weight: 900;
-  font-size: 1.05rem;
-  padding: 9px 14px;
-  border-radius: 999px;
-  white-space: nowrap;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+.hero-checklist li::before {
+  content: '✔';
+  margin-right: 8px;
+  color: var(--antenna-cyan);
 }
 
-/* Mobile pricing */
-@media (max-width: 480px) {
-  body.antenna-page .antenna-pricing {
-    max-width: 92%;
-  }
-
-  body.antenna-page .antenna-pricing li {
-    grid-template-columns: 1fr;
-  }
-
-  body.antenna-page .antenna-price {
-    justify-self: center;
-    margin-top: 6px;
-  }
-
-  body.antenna-page .antenna-name {
-    text-align: center;
-  }
+.hero-visual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
-/* Labels / callouts */
-body.antenna-page .section-label {
-  margin: 22px 0 10px;
-  font-size: 1rem;
-  font-weight: 800;
-  color: #0f172a;
+.hero-frame {
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 30px 50px rgba(0,0,0,0.45);
 }
 
-body.antenna-page .section-callout {
-  margin: 28px auto 14px;
-  padding: 10px 14px;
-  display: inline-block;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.18);
-  font-weight: 800;
-  font-size: 0.95rem;
-  color: #ffffff; /* stays inside blue hero */
-}
-
-/* =========================================================
-   ANTENNA HERO: 3-COLUMN DESKTOP (CLEAN + STABLE)
-   ========================================================= */
-
-body.antenna-page .antenna-hero {
+.hero-frame img {
   width: 100%;
+  height: 260px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
 }
 
-/* Main hero wrapper */
-body.antenna-page .antenna-hero .hero-inner.hero-antenna-layout {
-  width: min(1200px, 100%);
+.hero-frame figcaption {
+  margin: 0;
+  padding: 12px 18px;
+  background: rgba(0,0,0,0.6);
+  font-size: 0.9rem;
+}
+
+.hero-frame.secondary {
+  max-width: 250px;
+  margin-left: auto;
+}
+
+.hero-tag {
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(4, 18, 48, 0.85);
+  text-align: center;
+}
+
+.hero-tag p {
+  margin: 0 0 6px;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(245, 247, 255, 0.7);
+}
+
+/* SECTION WRAPPERS ------------------------------------- */
+.section-inner {
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
-  text-align: center;
 }
 
-/* Side images hidden on mobile/tablet */
-body.antenna-page .antenna-hero .hero-side {
-  display: none;
+.antenna-options,
+.antenna-process,
+.antenna-benefits {
+  background: var(--antenna-soft);
+  color: var(--antenna-slate);
+  padding: 90px 0;
 }
 
-/* Center column content */
-body.antenna-page .antenna-hero .hero-center {
-  max-width: 760px;
-  margin: 0 auto;
-  text-align: center;
+.antenna-options {
+  background: linear-gradient(135deg, #030c20, #04183c 55%, #072c6a);
+  color: var(--antenna-soft);
 }
 
-/* Desktop: 3 columns */
-@media (min-width: 1024px) {
-  body.antenna-page .antenna-hero .hero-inner.hero-antenna-layout {
-    display: grid;
-    grid-template-columns: 280px 1fr 280px;
-    gap: 40px;
-    align-items: start;
-    overflow: hidden;
-  }
-
-  body.antenna-page .antenna-hero .hero-side {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* Images inside fixed side containers */
-  body.antenna-page .antenna-hero .hero-side img {
-    width: auto;
-    height: auto;
-    max-width: 260px;
-    max-height: 380px;
-    object-fit: contain;
-    border-radius: 24px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-    opacity: 0.92;
-  }
-
-  body.antenna-page .antenna-hero .rating-social,
-  body.antenna-page .antenna-hero .hero-actions {
-    justify-content: center;
-  }
-
-  body.antenna-page .antenna-hero .antenna-pricing {
-    margin-left: auto;
-    margin-right: auto;
-  }
+.antenna-options h2,
+.antenna-benefits h2,
+.antenna-services h2,
+.antenna-process h2,
+.antenna-gallery h2,
+.antenna-cta h2 {
+  margin-bottom: 12px;
 }
 
-/* ---------------------------------------------------------
-   FIX: make header + dropdown always sit above hero images
-   --------------------------------------------------------- */
-body.antenna-page header {
+.section-lede {
+  max-width: 720px;
+  margin: 12px auto 30px;
+  font-size: 1.05rem;
+  color: rgba(15, 23, 42, 0.75);
+}
+
+/* Options */
+.section-kicker {
+  display: inline-flex;
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.85);
+  margin: 0 0 12px;
+}
+
+.antenna-options h2 {
+  margin-bottom: 24px;
+}
+
+.option-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.option-grid article {
+  border-radius: 28px;
+  padding: 28px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.35);
   position: relative;
-  z-index: 9999;
+  overflow: hidden;
 }
 
-body.antenna-page header nav,
-body.antenna-page header .header-container {
-  position: relative;
-  z-index: 9999;
+.option-grid article::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 28px;
+  background: radial-gradient(circle at top right, rgba(83,216,255,0.3), transparent 55%);
+  pointer-events: none;
 }
 
-body.antenna-page .antenna-hero {
+.option-grid article > * {
   position: relative;
   z-index: 1;
 }
 
-/* =========================================================
-   Antenna: show BOTH hero-side images side-by-side (mobile/tablet)
-   Works with your existing structure:
-   .hero-inner.hero-antenna-layout + .hero-side + .hero-center + .hero-side
-   ========================================================= */
-
-@media (max-width: 1023px) {
-  /* Turn the hero into a 2-col grid for images, then full-width content */
-  body.antenna-page .antenna-hero .hero-inner.hero-antenna-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "left right"
-      "center center";
-    gap: 12px;
-    align-items: start;
-  }
-
-  /* Make sure both side containers appear */
-  body.antenna-page .antenna-hero .hero-side {
-    display: block;
-    margin: 0;
-  }
-
-  /* Place left/right images */
-  body.antenna-page .antenna-hero .hero-side:first-of-type { grid-area: left; }
-  body.antenna-page .antenna-hero .hero-side:last-of-type  { grid-area: right; }
-
-  /* Center content under the images */
-  body.antenna-page .antenna-hero .hero-center {
-    grid-area: center;
-    margin-top: 8px;
-  }
-
-  /* Make images look good + same height */
-  body.antenna-page .antenna-hero .hero-side img {
-    width: 100%;
-    height: 270px;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
-  }
+.option-tag {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.78rem;
+  margin: 0 0 6px;
+  color: rgba(83,216,255,0.9);
 }
 
-/* Super small phones: stack images */
-@media (max-width: 300px) {
-  body.antenna-page .antenna-hero .hero-inner.hero-antenna-layout {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "left"
-      "right"
-      "center";
-  }
-
-  body.antenna-page .antenna-hero .hero-side img {
-    height: 200px;
-  }
+.option-price {
+  margin: 18px 0 0;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--antenna-cyan);
 }
 
-/* === Antenna page header: stop absolute logo conflicts === */
-body.antenna-page header .header-container {
-  justify-content: space-between;
+/* Benefits */
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
 }
 
-/* On antenna page only: make logo normal (not absolute) */
-body.antenna-page .logo {
-  position: static !important;
-  transform: none !important;
-  width: 175px;
-  height: auto;
-  max-width: 80%;
+.benefit-grid article {
+  padding: 24px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid rgba(15,23,42,0.08);
 }
 
-/* Keep facebook on the left, nav/hamburger on the right */
-body.antenna-page .facebook-link {
-  position: static !important;
-  transform: none !important;
+/* FAQ */
+.antenna-faq {
+  background: var(--antenna-soft);
+  color: var(--antenna-slate);
+  padding: 90px 0;
 }
 
-/* === Antenna page: force centered logo === */
-body.antenna-page header .header-container {
+.antenna-faq h2,
+.antenna-faq h3 {
+  color: var(--antenna-slate);
+}
+
+.antenna-faq .benefit-grid article p {
+  color: rgba(15, 23, 42, 0.9);
+}
+
+/* Signal levels */
+.antenna-signal {
+  background: linear-gradient(140deg, #030a1d, #031738 50%, #063064);
+  color: var(--antenna-soft);
+  padding: 90px 0;
+}
+
+.antenna-signal .section-kicker {
+  border-color: rgba(255,255,255,0.3);
+}
+
+.signal-lede {
+  color: rgba(245,247,255,0.78);
+}
+
+.signal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin: 40px 0 32px;
+}
+
+.signal-grid article {
+  border-radius: 26px;
+  padding: 28px;
+  background: rgba(3,10,28,0.65);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.35);
+}
+
+.signal-tag {
+  margin: 0 0 8px;
+  letter-spacing: 2px;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  color: rgba(83,216,255,0.8);
+}
+
+.signal-grid h3 {
+  margin: 0 0 10px;
+  font-size: 1.8rem;
+}
+
+.signal-points {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: rgba(245,247,255,0.8);
+}
+
+.signal-points li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.signal-points li::before {
+  content: '>';
+  margin-right: 8px;
+  color: var(--antenna-cyan);
+}
+
+.signal-meter {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 600;
+}
+
+.meter-bar {
+  flex: 1;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.1);
   position: relative;
 }
 
-/* Center logo regardless of side items */
-body.antenna-page header .logo {
+.meter-range {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 22%;
+  right: 22%;
+  top: 0;
+  bottom: 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--antenna-azure), var(--antenna-cyan));
+  box-shadow: 0 0 12px rgba(83,216,255,0.6);
 }
 
-/* Ensure FB + nav stay clickable */
-body.antenna-page .facebook-link,
-body.antenna-page .main-nav,
-body.antenna-page .nav-toggle {
+.meter-caption {
+  margin-top: 12px;
+  color: rgba(245,247,255,0.75);
+}
+
+/* Process */
+.process-list {
+  list-style: none;
+  padding: 0;
+  margin: 36px 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.process-list li {
+  display: flex;
+  gap: 12px;
+  padding: 20px;
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid rgba(15,23,42,0.08);
+}
+
+.process-step {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--antenna-azure);
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Gallery */
+.antenna-gallery {
+  background: #030b1f;
+  color: var(--antenna-soft);
+  padding: 90px 0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.gallery-grid figure {
+  margin: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.04);
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-grid .gallery-lightbox {
+  display: block;
+  cursor: zoom-in;
+}
+
+.gallery-grid figcaption {
+  padding: 12px 16px;
+  font-size: 0.9rem;
+  color: rgba(245,247,255,0.85);
+}
+
+.antenna-page .lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 9999;
+}
+
+.antenna-page .lightbox.is-open {
+  display: block;
+}
+
+.antenna-page .lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.antenna-page .lightbox-content {
   position: relative;
-  z-index: 2;
+  max-width: min(1000px, 92vw);
+  margin: 6vh auto 0;
+  background: #000;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+.antenna-page .lightbox-content img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.antenna-page .lightbox-caption {
+  margin: 0;
+  padding: 12px 16px;
+  color: #fff;
+  font-size: 0.95rem;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.antenna-page .lightbox-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.antenna-page .lightbox-close:hover {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+/* CTA */
+.antenna-cta {
+  padding: 90px 0 120px;
+  background: linear-gradient(120deg, var(--antenna-azure), var(--antenna-cyan));
+  color: #03122c;
+  text-align: center;
+}
+
+.antenna-cta .hero-actions {
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.antenna-cta .cta-review-strip {
+  max-width: 760px;
+  margin: 16px auto 0;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: rgba(3, 18, 44, 0.14);
+  border: 1px solid rgba(3, 18, 44, 0.25);
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.antenna-cta .cta-review-strip span {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+.antenna-cta .hero-cta.quote {
+  background: rgba(3, 18, 44, 0.9);
+  color: #fff;
+}
+
+/* Rating colours */
+body.antenna-page .rating-social {
+  justify-content: center;
+  color: var(--antenna-soft);
+}
+
+body.antenna-page .rating-text {
+  color: rgba(245,247,255,0.75);
+}
+
+/* Scroll reveal */
+[data-reveal] {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .antenna-hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-copy {
+    order: 1;
+  }
+
+  .hero-visual {
+    order: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .antenna-hero {
+    padding: 110px 16px 80px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-frame img {
+    height: 210px;
+  }
 }

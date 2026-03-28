@@ -9,6 +9,30 @@
   <meta name="description"
     content="Thank you for contacting Future Proof Antenna & Cabling Services. We have received your message and will be in touch shortly.">
   <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://futureproofantenna.com.au/thankyou.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Future Proof Antenna & Cabling">
+  <meta property="og:title" content="Thank You | Future Proof Antenna & Cabling Services">
+  <meta property="og:description" content="Thanks for contacting Future Proof Antenna & Cabling Services. We have received your request and will be in touch shortly.">
+  <meta property="og:url" content="https://futureproofantenna.com.au/thankyou.html">
+  <meta property="og:image" content="https://futureproofantenna.com.au/images/future-proof-logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta http-equiv="refresh" content="6;url=/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Thank You | Future Proof Antenna & Cabling Services",
+    "url": "https://futureproofantenna.com.au/thankyou.html",
+    "description": "Confirmation page shown after quote submission.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Future Proof Antenna & Cabling",
+      "url": "https://futureproofantenna.com.au/"
+    }
+  }
+  </script>
 
   <!-- Google Global Tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17678695746"></script>
@@ -80,6 +104,12 @@
       transform: translateY(-3px);
     }
 
+    .countdown-note {
+      margin-top: 18px;
+      font-size: 0.98rem;
+      color: #253858;
+    }
+
     footer {
       margin-top: 60px;
       background: #004aad;
@@ -93,18 +123,48 @@
 <body>
 
   <header>
-    <img class="logo" src="Images/Untitled design.png" alt="Future Proof Antenna & Cabling Services logo">
+    <img class="logo" src="images/future-proof-logo.png" alt="Future Proof Antenna & Cabling Services logo">
   </header>
 
   <main>
-    <h1>Thank You!</h1>
-    <p>Your message has been sent successfully.<br>We’ll get back to you shortly.</p>
-    <a href="index.html" class="button">Back to Home</a>
+    <h1>Thanks — we’ve got your request.</h1>
+    <p>
+      We’ll review your job details and get back to you shortly — usually within a few hours.<br><br>
+      If your job is urgent, feel free to call us directly on <strong>0493 819 163</strong>.
+    </p>
+    <p style="margin-top:20px;">
+      Want a faster response?
+      <a href="tel:0493819163"><strong>Call us now</strong></a>
+    </p>
+    <p style="margin-top:20px; font-size:1rem; color:#666;">
+      ⭐ 5-Star Rated Local Business • Fast Response Times • Perth Northern Suburbs
+    </p>
+    <p class="countdown-note">You’ll be sent back to the home page automatically in <span id="redirect-countdown">6</span> seconds.</p>
+    <a href="/" class="button">Back to Home</a>
   </main>
 
   <footer>
-    © 2025 Future Proof Antenna & Cabling Services – All Rights Reserved
+    © 2026 Future Proof Antenna & Cabling Services – All Rights Reserved
   </footer>
+
+  <script>
+    (function () {
+      const countdown = document.getElementById('redirect-countdown');
+      let secondsRemaining = 6;
+
+      if (!countdown) return;
+
+      const timer = window.setInterval(() => {
+        secondsRemaining -= 1;
+        countdown.textContent = String(Math.max(secondsRemaining, 0));
+
+        if (secondsRemaining <= 0) {
+          window.clearInterval(timer);
+          window.location.href = '/';
+        }
+      }, 1000);
+    }());
+  </script>
 
 </body>
 

@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO -->
-  <title>Get a Quote Perth | Antennas, Starlink & Data Cabling</title>
+  <title>Request a Quote Perth | Antenna, Starlink, Wi-Fi & Data Cabling</title>
   <meta name="description"
-    content="Request a fast quote for TV antennas, Starlink installs, Wi-Fi upgrades or data cabling in Perth. Servicing northern suburbs from Lancelin to Fremantle." />
+    content="Request a fast quote for antenna repairs, Starlink installs, Wi-Fi upgrades, NBN relocation or data cabling across Perth's northern suburbs. Clear scope, practical pricing and fast response." />
   <link rel="canonical" href="https://futureproofantenna.com.au/quote.html" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" href="favicon.png" />
@@ -17,10 +18,38 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Get a Quote Perth | Antennas, Starlink & Data Cabling" />
+  <meta property="og:site_name" content="Future Proof Antenna & Cabling" />
+  <meta property="og:title" content="Request a Quote Perth | Antenna, Starlink, Wi-Fi & Data Cabling" />
   <meta property="og:description"
-    content="Fast quotes for antennas, Starlink, Wi-Fi and data cabling across Perth’s northern suburbs." />
+    content="Fast quotes for antenna repairs, Starlink installs, Wi-Fi upgrades, NBN relocation and data cabling across Perth's northern suburbs." />
   <meta property="og:url" content="https://futureproofantenna.com.au/quote.html" />
+  <meta property="og:image" content="https://futureproofantenna.com.au/images/tv-antenna-installation-butler-wa.jpeg" />
+  <meta property="og:image:alt" content="Future Proof Antenna & Cabling service work across Perth northern suburbs" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Request a Quote Perth | Antenna, Starlink, Wi-Fi & Data Cabling" />
+  <meta name="twitter:description"
+    content="Fast quotes for antenna repairs, Starlink installs, Wi-Fi upgrades, NBN relocation and data cabling across Perth's northern suburbs." />
+  <meta name="twitter:image" content="https://futureproofantenna.com.au/images/tv-antenna-installation-butler-wa.jpeg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Request a Quote | Future Proof Antenna & Cabling",
+    "url": "https://futureproofantenna.com.au/quote.html",
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "name": "Future Proof Antenna & Cabling Services",
+      "telephone": "+61 493 819 163",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Perth, WA"
+      }
+    }
+  }
+  </script>
 
   <!-- Google tag (GA4 + Google Ads) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5PS6H8108"></script>
@@ -37,9 +66,14 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="quote.css" />
+
+  <script>
+    window.GOOGLE_MAPS_API_KEY = window.GOOGLE_MAPS_API_KEY || "";
+  </script>
 </head>
 
-<body>
+<body class="quote-page-body">
 
   <header>
     <div class="header-container">
@@ -51,8 +85,8 @@
       </a>
 
       <!-- Logo -->
-      <a href="index.html">
-        <img class="logo" src="Images/future-proof-logo.png" alt="Future Proof Antenna & Cabling" />
+      <a href="/">
+        <img class="logo" src="images/future-proof-logo.png" alt="Future Proof Antenna & Cabling" />
       </a>
 
       <!-- Hamburger -->
@@ -62,9 +96,10 @@
       <!-- Desktop Nav -->
       <nav class="main-nav">
         <ul>
-          <li><a href="index.html#home">Home</a></li>
-
-          </li>
+          <li><a href="/">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="quote.html" aria-current="page">Request a Quote</a></li>
         </ul>
       </nav>
     </div>
@@ -72,88 +107,187 @@
     <!-- Mobile Nav -->
     <nav class="mobile-nav" id="mobile-nav">
       <ul>
-        <li><a href="index.html#home">Home</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="quote.html" aria-current="page">Request a Quote</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="quote-page">
-      <div class="quote-wrap">
-        <h1>Request a Quote</h1>
-        <p class="quote-intro">
-          Fill in your details below and we’ll get back to you with options tailored to your property.
-        </p>
+    <section class="quote-hero" data-reveal>
+      <div class="quote-hero-inner">
+        <div class="hero-left">
+          <p class="quote-kicker">Antenna, Starlink, Wi-Fi and cabling quotes • Perth north</p>
+          <h1>Fast quote with clear scope, practical pricing and no guesswork.</h1>
+          <p class="quote-intro">Tell us the job once and we’ll send a practical quote for antenna repairs, Starlink installs, Wi-Fi upgrades, NBN relocation or data cabling with the next available install window.</p>
 
-        <!-- SINGLE FORM ONLY -->
-        <form id="quote-form" action="https://formspree.io/f/mjkpvyop" method="POST"
-          data-redirect="https://futureproofantenna.com.au/thankyou.html">
-
-          <div class="form-row">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="Name" required />
+          <div class="hero-trust" role="list">
+            <article role="listitem">
+              <p class="trust-value">1,800+</p>
+              <p class="trust-label">completed callouts</p>
+            </article>
+            <article role="listitem">
+              <p class="trust-value">Same or next day</p>
+              <p class="trust-label">typical response</p>
+            </article>
+            <article role="listitem">
+              <p class="trust-value">12 Month</p>
+              <p class="trust-label">workmanship warranty</p>
+            </article>
           </div>
 
-          <div class="form-row">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="Email" required />
+          <div class="hero-actions">
+            <a href="#quote-form" class="hero-cta primary">Start My Quote</a>
+            <a href="tel:0493819163" class="hero-cta secondary">Call 0493 819 163</a>
+          </div>
+        </div>
+
+        <aside class="hero-right" aria-label="What to expect">
+          <h2>How this works</h2>
+          <ol>
+            <li><strong>Submit details</strong> in under 2 minutes.</li>
+            <li><strong>Receive options</strong> tailored to your property.</li>
+            <li><strong>Book your slot</strong> with fixed arrival window.</li>
+          </ol>
+          <p>Most requests are answered the same or next business day.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="quote-builder" data-reveal>
+      <div class="quote-layout">
+        <aside class="quote-left-rail" aria-label="Service guide and pricing">
+          <h3>Popular services and guide pricing</h3>
+          <ul class="service-list">
+            <li><span>Antenna installation</span><strong>from $299</strong></li>
+            <li><span>Starlink installation</span><strong>from $499</strong></li>
+            <li><span>Wi-Fi upgrades</span><strong>from $350</strong></li>
+            <li><span>NBN relocation</span><strong>from $720</strong></li>
+          </ul>
+
+          <div class="rail-divider"></div>
+
+          <h3>Need urgent help?</h3>
+          <p>Call now and we’ll confirm the next available tech window across Perth northern suburbs.</p>
+          <a class="side-call" href="tel:0493819163">📞 0493 819 163</a>
+        </aside>
+
+        <div class="quote-form-card">
+          <h2>Request your custom quote</h2>
+          <p class="form-lede">Select your service, add property details, and we’ll send practical options that match your site, access and wiring needs.</p>
+
+          <div class="service-chips" role="group" aria-label="Quick service select">
+            <button type="button" class="service-chip" data-service="Antenna Installation">Antenna</button>
+            <button type="button" class="service-chip" data-service="TV Wall Mounting">TV Mount</button>
+            <button type="button" class="service-chip" data-service="Starlink Installation">Starlink</button>
+            <button type="button" class="service-chip" data-service="Home &amp; Wi-Fi Upgrades">Wi-Fi</button>
+            <button type="button" class="service-chip" data-service="NBN Relocation &amp; Troubleshooting">NBN</button>
+            <button type="button" class="service-chip" data-service="Data Cabling &amp; I.T. Services">Data / IT</button>
           </div>
 
-          <div class="form-row">
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="Phone" placeholder="04XXXXXXXX" required />
-          </div>
+          <form id="quote-form" action="https://formspree.io/f/mjkpvyop" method="POST"
+            data-redirect="https://futureproofantenna.com.au/thankyou.html">
 
-          <div class="form-row">
-            <label for="address">Address:</label>
-            <input type="text" id="address" name="Address" autocomplete="street-address" required />
-          </div>
+            <fieldset class="form-section">
+              <legend>Contact</legend>
+              <div class="form-grid two-col">
+                <div class="form-row">
+                  <label for="name">Full name</label>
+                  <input type="text" id="name" name="Name" autocomplete="name" required />
+                </div>
 
-          <div class="form-row">
-            <label for="roof-type">Roof Type:</label>
-            <select id="roof-type" name="Roof Type" required>
-              <option value="">Select roof type</option>
-              <option value="Tin">Tin (Colorbond / Metal)</option>
-              <option value="Tile">Tile</option>
-              <option value="Other">Other / Not sure</option>
-            </select>
-          </div>
+                <div class="form-row">
+                  <label for="phone">Mobile number</label>
+                  <input type="tel" id="phone" name="Phone" placeholder="04XXXXXXXX" autocomplete="tel" required />
+                </div>
 
-          <div class="form-row">
-            <label for="storeys">Number of Storeys:</label>
-            <select id="storeys" name="Storeys" required>
-              <option value="">Select storeys</option>
-              <option value="Single">Single storey</option>
-              <option value="Double">Double storey</option>
-              <option value="Three">Three storey</option>
-            </select>
-          </div>
+                <div class="form-row wide">
+                  <label for="email">Email address</label>
+                  <input type="email" id="email" name="Email" autocomplete="email" required />
+                </div>
+              </div>
+            </fieldset>
 
-          <div class="form-row">
-            <label for="service">Service Required:</label>
-            <select id="service" name="Service">
-              <option>Antenna Installation</option>
-              <option>TV Wall Mounting</option>
-              <option>Starlink Installation</option>
-              <option>Wi-Fi Upgrade</option>
-              <option>NBN Relocation / Troubleshooting</option>
-            </select>
-          </div>
+            <fieldset class="form-section">
+              <legend>Project</legend>
+              <div class="form-grid two-col">
+                <div class="form-row wide">
+                  <label for="service">Service required</label>
+                  <select id="service" name="Service" required>
+                    <option value="">Select service</option>
+                    <option>Antenna Installation</option>
+                    <option>TV Wall Mounting</option>
+                    <option>Starlink Installation</option>
+                    <option>Home &amp; Wi-Fi Upgrades</option>
+                    <option>NBN Relocation &amp; Troubleshooting</option>
+                    <option>Data Cabling &amp; I.T. Services</option>
+                  </select>
+                </div>
 
-          <div class="form-row">
-            <label for="message">Additional Details:</label>
-            <textarea id="message" name="Message" rows="4" placeholder="Anything else we should know?"></textarea>
-          </div>
+                <div class="form-row wide">
+                  <label for="address">Property address</label>
+                  <input type="text" id="address" name="Address" autocomplete="street-address" required />
+                  <small class="field-hint">Start typing and choose your address from Google suggestions.</small>
+                </div>
 
-          <button type="submit" class="btn-quote-submit">Submit Quote Request</button>
-        </form>
+                <div class="form-row">
+                  <label for="roof-type">Roof type</label>
+                  <select id="roof-type" name="Roof Type" required>
+                    <option value="">Select roof type</option>
+                    <option value="Tin">Tin (Colorbond / Metal)</option>
+                    <option value="Tile">Tile</option>
+                    <option value="Other">Other / Not sure</option>
+                  </select>
+                </div>
+
+                <div class="form-row">
+                  <label for="storeys">Storeys</label>
+                  <select id="storeys" name="Storeys" required>
+                    <option value="">Select storeys</option>
+                    <option value="Single">Single storey</option>
+                    <option value="Double">Double storey</option>
+                    <option value="Three">Three storey</option>
+                  </select>
+                </div>
+
+                <div class="form-row">
+                  <label for="contact-method">Preferred contact</label>
+                  <select id="contact-method" name="Preferred Contact Method">
+                    <option value="Phone">Phone</option>
+                    <option value="Email">Email</option>
+                    <option value="SMS">SMS</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label for="message">Project details</label>
+                <textarea id="message" name="Message" rows="5"
+                  placeholder="Describe the issue, current setup, and what result you want."></textarea>
+              </div>
+            </fieldset>
+
+            <input class="hp-field" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <label class="consent-row" for="consent">
+              <input type="checkbox" id="consent" name="Consent" required>
+              <span>I agree to be contacted about this quote request.</span>
+            </label>
+
+            <p class="form-feedback" id="quote-feedback" aria-live="polite"></p>
+            <button type="submit" class="btn-quote-submit">Send Quote Request</button>
+            <p class="form-meta">No spam. One practical response with service options, pricing guidance and availability.</p>
+          </form>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
     <p>
-      &copy; 2025 Future Proof Antenna &amp; Cabling Services
+      &copy; 2026 Future Proof Antenna &amp; Cabling Services
       <span class="footer-license">T44288</span>
     </p>
   </footer>
