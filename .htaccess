@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Redirect legacy mixed-case URLs found in Search Console.
+RewriteRule ^DataIT\.html$ /datait.html [R=301,L,NC]
+RewriteRule ^Quote\.html$ /quote.html [R=301,L,NC]
+RewriteRule ^HomeWifi\.html$ /homewifi.html [R=301,L,NC]
+RewriteRule ^wifi\.html$ /homewifi.html [R=301,L,NC]
